@@ -53,3 +53,5 @@ export default {
 @tailwind components;
 @tailwind utilities;
 ```
+
+# 5. shadcn配置 [shadcn-ui](https://ui.shadcn.com/docs/installation/vite)
