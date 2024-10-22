@@ -36,6 +36,10 @@ const router = [
         children: [
             //歌单广场
             {
+                index: true,
+                element: <Suspense fallback={'加载中'}><DiscoverPlayLists /></Suspense>
+            },
+            {
                 path: 'playlists',
                 element: <Suspense fallback={'加载中'}><DiscoverPlayLists /></Suspense>
             },
@@ -63,6 +67,10 @@ const router = [
         element: <Suspense fallback={'加载中'}><Artist /></Suspense>,
         children: [
             //专辑
+            {
+                index: true,
+                element: <Suspense fallback={'加载中'}><ArtistAlbums /></Suspense>
+            },
             {
                 path: 'albums',
                 element: <Suspense fallback={'加载中'}><ArtistAlbums /></Suspense>
