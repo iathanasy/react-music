@@ -13,6 +13,9 @@ import React, {useState} from "react";
 import {useLocation, useNavigate} from "react-router-dom";
 const { Header, Sider, Content } = Layout;
 
+import './LayoutIndex.scss'
+import LogoVite from '@/assets/vite.svg'
+
 const items=[
     {
         label: '首页',
@@ -65,7 +68,10 @@ export function LayoutIndex({element}) {
                 <Sider trigger={null} collapsible collapsed={collapsed} theme="light" style={{
                     background: '#f1f5f9'
                 }}>
-                    <div className="demo-logo-vertical" ></div>
+                    <div className="demo-logo-vertical">
+                        <img src={LogoVite} alt="Logo" />
+                        <span>Music</span>
+                    </div>
                     {/*导航栏*/}
                     <Menu
                         theme="light"

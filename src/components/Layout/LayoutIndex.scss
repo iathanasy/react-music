@@ -1,0 +1,18 @@
+.demo-logo-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 1rem;
+  transition: transform 0.3s;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.1);
+  }
+  span{
+    color: #3f3f46;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 10px;
+  }
+}
