@@ -8,13 +8,14 @@ import {
     MutedOutlined,
     HomeOutlined
 } from '@ant-design/icons';
-import { Button, Layout, Menu, theme } from 'antd';
+import { Button, Layout, Menu, Divider, theme } from 'antd';
 import React, {useState} from "react";
 import {useLocation, useNavigate} from "react-router-dom";
 const { Header, Sider, Content } = Layout;
 
 import './LayoutIndex.scss'
 import LogoVite from '@/assets/vite.svg'
+import MainPlayer from "@/components/Player/MainPlayer";
 
 const items=[
     {
@@ -121,6 +122,7 @@ export function LayoutIndex({element}) {
             </Layout>
             {/*播放列表*/}
             {/*全局播放器*/}
+            <MainPlayer />
             {/*全屏播放器*/}
         </>
     )
