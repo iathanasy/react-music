@@ -16,6 +16,7 @@ const { Header, Sider, Content } = Layout;
 import './LayoutIndex.scss'
 import LogoVite from '@/assets/vite.svg'
 import MainPlayer from "@/components/Player/MainPlayer";
+import FullPlayer from '../Player/FullPlayer';
 
 const items=[
     {
@@ -124,6 +125,7 @@ export function LayoutIndex({element}) {
             {/*全局播放器*/}
             <MainPlayer />
             {/*全屏播放器*/}
+            <FullPlayer />
         </>
     )
 }
