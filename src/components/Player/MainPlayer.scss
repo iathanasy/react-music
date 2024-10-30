@@ -2,10 +2,76 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  height: 80px;
+  height: 6.25rem;
   width: 100%;
+  min-width: min-content;
   z-index: 10;
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, .85);
+  /* x 偏移量 | y 偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 */
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.play-data{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  .cover{
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    .cover-img{
+      width: 100%;
+    }
+  }
+  .info{
+    h3{
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    span{
+      font-size: 12px;
+    }
+  }
+}
+
+.play-control{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  .play-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .player-slider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .player-seekbar{
+      width: 70%;
+    }
+  }
+}
+
+.play-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  .volume-col{
+    display: inline-flex;
+    gap: 12px;
+    .player-volume{
+      width: 70px;
+    }
+    .vertical{
+      border-right: 1px solid rgba(229, 230, 235, 1);
+      height: 1rem;
+      align-self: center;
+    }
+  }
 }

@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* 不能复制 */
+    user-select: none;
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+    ::after {
+      box-sizing: border-box;
+    }
+}
+  
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
