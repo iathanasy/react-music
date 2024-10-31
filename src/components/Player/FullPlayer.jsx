@@ -1,7 +1,9 @@
 import React from 'react';
 import { Layout, Typography, Space, Slider, Button } from 'antd';
 import { PlayCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined } from '@ant-design/icons';
-import './FullPlayer.scss';
+// import './FullPlayer.module.css';
+import './FullPlayer.css';
+// css 写法： https://www.w3schools.com/react/react_css.asp
 
 const { Content } = Layout;
 const { Title, Text } = Typography;

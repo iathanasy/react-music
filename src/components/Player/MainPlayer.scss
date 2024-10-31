@@ -41,7 +41,7 @@
   width: 500px;
   display: flex;
   flex-direction: column;
-  .play-icon{
+  .play-btn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,10 +68,16 @@
     .player-volume{
       width: 70px;
     }
-    .vertical{
-      border-right: 1px solid rgba(229, 230, 235, 1);
-      height: 1rem;
-      align-self: center;
-    }
   }
+}
+
+// 公共样式
+.play-icon{
+  font-size: 20px;
+  cursor: pointer;
+}
+.vertical{
+  border-right: 1px solid rgba(229, 230, 235, 1);
+  height: 1rem;
+  align-self: center;
 }

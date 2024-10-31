@@ -1,5 +1,5 @@
-import {Slider,Affix,Button,Divider, Space, Typography} from "antd";
-import { PlayCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined,MenuUnfoldOutlined,SoundOutlined } from '@ant-design/icons';
+import {Slider,Affix,Button,Divider, Space, Typography,Tooltip } from "antd";
+import { PlayCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined,MenuUnfoldOutlined,SoundOutlined,MutedOutlined,CaretRightOutlined,PauseOutlined } from '@ant-design/icons';
 import './MainPlayer.scss'
 import coverImg from '@/assets/placeholder.svg'
 export default function MainPlayer(){
@@ -17,10 +17,17 @@ export default function MainPlayer(){
             </div>
             {/* 控制 */}
             <div className="play-control">
-                <div className="play-icon">
-                    <Button shape="circle" icon={<StepBackwardOutlined />} />
-                    <Button shape="circle" icon={<PlayCircleOutlined style={{fontSize:"30px"}}/>} size="large" />
-                    <Button shape="circle" icon={<StepForwardOutlined />} />
+                <div className="play-btn">
+                    <Tooltip title="上一首">
+                        <StepBackwardOutlined className="play-icon"/>
+                    </Tooltip>
+                    <Tooltip title="播放">
+                        <CaretRightOutlined className="play-icon" style={{fontSize:"30px"}}/>
+                        {/* <PauseOutlined className="play-icon" style={{fontSize:"30px"}}/> */}
+                    </Tooltip>
+                    <Tooltip title="下一首">
+                        <StepForwardOutlined className="play-icon"/>
+                    </Tooltip>
                 </div>
                 <div className="player-slider">
                     <span className="player-time">00:00</span>
@@ -37,19 +44,27 @@ export default function MainPlayer(){
             </div>
             {/* 功能 */}
             <div className="play-menu">
+                <Tooltip title="列表循环">
+                    <RetweetOutlined className="play-icon"/>
+                </Tooltip>
+                <span className="vertical"></span>
                 <div className="volume-col">
-                    <SoundOutlined style={{fontSize:"20px",cursor:"pointer"}}/>
+                    <Tooltip title="音量">
+                        <SoundOutlined className="play-icon"/>
+                    </Tooltip>
+                    {/* <MutedOutlined className="play-icon" /> */}
                     <Slider
                             min={0}
                             max={100}
                             step={1}
-                            defaultValue={0}
+                            defaultValue={50}
                             className="player-volume"
                             />  
                     <span className="vertical"></span>
                 </div>
-                
-                <MenuUnfoldOutlined style={{fontSize:"20px",cursor:"pointer"}}/>
+                <Tooltip title="播放列表">
+                    <MenuUnfoldOutlined className="play-icon"/>
+                </Tooltip>
             </div>
         </div>
     )
