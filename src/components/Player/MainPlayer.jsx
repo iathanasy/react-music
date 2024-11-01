@@ -2,6 +2,21 @@ import {Slider,Affix,Button,Divider, Space, Typography,Tooltip } from "antd";
 import { PlayCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined,MenuUnfoldOutlined,SoundOutlined,MutedOutlined,CaretRightOutlined,PauseOutlined } from '@ant-design/icons';
 import './MainPlayer.scss'
 import coverImg from '@/assets/placeholder.svg'
+// yarn add react-ionicons
+// https://react-icons.github.io/react-icons/
+import {
+	PauseCircle,
+	PlayBack,
+	PlayCircle,
+	PlayForward,
+	VolumeMediumOutline,
+	VolumeMuteOutline,
+} from "react-ionicons";
+
+// yarn add styled-components
+// https://www.npmjs.com/package/styled-components
+import styled from 'styled-components';
+
 export default function MainPlayer(){
     return (
         <div className="main-player">
@@ -44,6 +59,7 @@ export default function MainPlayer(){
             </div>
             {/* 功能 */}
             <div className="play-menu">
+                <PlayCircle />
                 <Tooltip title="列表循环">
                     <RetweetOutlined className="play-icon"/>
                 </Tooltip>
