@@ -1,5 +1,5 @@
 export const tracks = [
-    { name: "Mekanın Sahibi", artist: "Norm Ender", cover: "/music/img/1.jpg", source: "/music/mp3/1.mp3", url: "https://www.youtube.com/watch?v=z3wAjJXbYzA", favorited: false },
+    { name: "Mekanın Sahibi大神大大大盛大的反反复复发反反复复发发发", artist: "Norm Ender大发啊发发发发发反反复复发反反复复反反复复反反复复反反复复", cover: "/music/img/1.jpg", source: "/music/mp3/1.mp3", url: "https://www.youtube.com/watch?v=z3wAjJXbYzA", favorited: false },
     { name: "Track 2", artist: "Artist 2", cover: "/music/img/2.jpg", source: "/music/mp3/2.mp3" },
     { name: "Track 3", artist: "Artist 3", cover: "/music/img/3.jpg", source: "/music/mp3/3.mp3"},
     { name: "Track 4", artist: "Artist 4", cover: "/music/img/4.jpg", source: "/music/mp3/4.mp3"},

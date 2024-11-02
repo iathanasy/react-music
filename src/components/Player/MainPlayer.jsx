@@ -204,9 +204,9 @@ export default function MainPlayer(){
                     <Avatar shape="square" size={60} src={playlist[currentTrackIndex].cover} class="cover-img" />
                     {/* <img src={playlist[currentTrackIndex].cover} class="cover-img" /> */}
                 </div>
-                <div className="info">
-                    <h3 className="name">{playlist[currentTrackIndex].name}</h3>
-                    <span className="artists">{playlist[currentTrackIndex].artist}</span>
+                <div className="info text-truncate">
+                    <h3 className="name" title={playlist[currentTrackIndex].name}>{playlist[currentTrackIndex].name}</h3>
+                    <span className="artists" title={playlist[currentTrackIndex].artist}>{playlist[currentTrackIndex].artist}</span>
                 </div>
             </div>
             {/* 控制 */}
@@ -299,8 +299,8 @@ export default function MainPlayer(){
                             <List.Item className={currentTrackIndex === index ?'play-list play-list-active':'play-list'}>
                                 <List.Item.Meta
                                     avatar={<Avatar shape="square" size={40} src={item.cover} />}
-                                    title={<h5 className="play-list-name">{item.name}</h5>}
-                                    description={<a href="#" className="play-list-artist">{item.artist}</a>}
+                                    title={<h5 className="play-list-name text-truncate" title={item.name}>{item.name}</h5>}
+                                    description={<a href="#" className="play-list-artist text-truncate" title={item.artist}>{item.artist}</a>}
                     
                                 />
                                 {(isPlaying && currentTrackIndex === index) ?
