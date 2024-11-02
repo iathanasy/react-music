@@ -71,6 +71,41 @@
   }
 }
 
+.play-list-header{
+  display: flex;
+  justify-content: space-between;
+  color: rgb( 78,89,105 );
+}
+.play-list{
+  .play-list-name{
+    font-size: 12px;
+  }
+  .play-list-artist{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+    font-size: 10px;
+    &:hover{
+      color: red;
+      text-decoration: underline;
+    }
+  }
+}
+.play-list-active{
+  background-color: #108ee9;
+  border-radius: 10px;
+  color: #fff !important;
+  .play-list-name{
+    color: #fff !important;
+  }
+  .play-list-artist{
+    color: #fff !important;
+  }
+}
+
+
 // 公共样式
 .play-icon{
   font-size: 20px;

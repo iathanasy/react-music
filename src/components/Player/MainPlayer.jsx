@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import {Slider,Affix,Button,Divider, Space, Typography,Tooltip } from "antd";
-import { PlayCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined,MenuUnfoldOutlined,SoundOutlined,MutedOutlined,CaretRightOutlined,PauseOutlined } from '@ant-design/icons';
+import {Slider,Affix,Button,Divider, Space, Typography,Tooltip,Drawer,List,Avatar } from "antd";
+import { PlayCircleOutlined,PauseCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined,MenuUnfoldOutlined,SoundOutlined,MutedOutlined,CaretRightOutlined,PauseOutlined } from '@ant-design/icons';
 import './MainPlayer.scss'
 import coverImg from '@/assets/placeholder.svg'
 import { tracks } from "@/data/data";
@@ -19,6 +19,8 @@ import {
 // https://www.npmjs.com/package/styled-components
 // import styled from 'styled-components';
 
+const { Text } = Typography;
+
 export default function MainPlayer(){
 
     const [isPlaying, setIsPlaying] = useState(false)
@@ -28,13 +30,21 @@ export default function MainPlayer(){
     const [currentTrackIndex, setCurrentTrackIndex] = useState(0)
     const [duration, setDuration] = useState(0)
     const [currentTime, setCurrentTime] = useState(0)
-    const [volume, setVolume] = useState(1)
+    const [volume, setVolume] = useState(0.50)
     const [isShuffled, setIsShuffled] = useState(false)
 
     const audioRef = useRef(null)
 
+    const [open, setOpen] = useState(false);
+
     useEffect(()=>{
         if(audioRef.current){
+            // 异常事件
+            // audioRef.current.addEventListener("error", () => {
+            //     console.error(`Error loading: ${audioRef.current.src}`);
+            // })
+            // 初始化音量
+            audioRef.current.volume = volume
             // 加载元数据
             audioRef.current.addEventListener('loadedmetadata', ()=>{
                 setDuration(audioRef.current.duration)
@@ -166,8 +176,21 @@ export default function MainPlayer(){
         const minutes = Math.floor(time / 60)
         const seconds = Math.floor(time % 60)
         return `${minutes}:${seconds.toString().padStart(2, '0')}`
-      }
+    }
 
+    /**
+     * 展示播放列表
+     */
+    const showDrawer = () => {
+        setOpen(true);
+    }
+    /**
+     * 关闭播放列表
+     */
+    const closeDrawer = () => {
+        setOpen(false);
+    }
+    
 
     return (
         <div className="main-player">
@@ -178,7 +201,8 @@ export default function MainPlayer(){
             {/* 播放信息 */}
             <div className="play-data">
                 <div className="cover">
-                    <img src={playlist[currentTrackIndex].cover} class="cover-img" />
+                    <Avatar shape="square" size={60} src={playlist[currentTrackIndex].cover} class="cover-img" />
+                    {/* <img src={playlist[currentTrackIndex].cover} class="cover-img" /> */}
                 </div>
                 <div className="info">
                     <h3 className="name">{playlist[currentTrackIndex].name}</h3>
@@ -252,7 +276,43 @@ export default function MainPlayer(){
                     <span className="vertical"></span>
                 </div>
                 <Tooltip title="播放列表">
-                    <MenuUnfoldOutlined className="play-icon"/>
+                    <MenuUnfoldOutlined className="play-icon" onClick={showDrawer}/>
+
+                    <Drawer
+                        title="播放列表"
+                        placement="right"
+                        onClose={closeDrawer}
+                        open={open}
+                        width={350}
+                    >
+                          <List
+                            size="small"
+                            itemLayout="horizontal"
+                            dataSource={playlist}
+                            header={<div className="play-list-header">
+                                    <span>共{playlist.length}首</span>
+                                    <div>
+                                        清空列表
+                                    </div>
+                            </div>}
+                            renderItem={(item, index) => (
+                            <List.Item className={currentTrackIndex === index ?'play-list play-list-active':'play-list'}>
+                                <List.Item.Meta
+                                    avatar={<Avatar shape="square" size={40} src={item.cover} />}
+                                    title={<h5 className="play-list-name">{item.name}</h5>}
+                                    description={<a href="#" className="play-list-artist">{item.artist}</a>}
+                    
+                                />
+                                {(isPlaying && currentTrackIndex === index) ?
+                                 <PauseCircleOutlined className="play-icon" onClick={togglePlayPause}/> 
+                                 : 
+                                 <PlayCircleOutlined className="play-icon" onClick={() => selectTrack(index)}/>
+                                 }
+                            </List.Item>
+                            )}
+                        />
+                        
+                    </Drawer>
                 </Tooltip>
             </div>
         </div>
