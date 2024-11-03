@@ -1,56 +1,46 @@
-import React from 'react';
-import { Layout, Typography, Space, Slider, Button } from 'antd';
-import { PlayCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined } from '@ant-design/icons';
-// import './FullPlayer.module.css';
+import React, { useState, useEffect, useRef } from 'react';
+import { Layout, Typography, Button, Tag, Input, Badge } from 'antd';
+import { 
+  HeartOutlined,
+  PlusOutlined,
+  DownloadOutlined,
+  ShareAltOutlined,
+  SettingOutlined,
+  MailOutlined,
+  SkinOutlined,
+  MessageOutlined,
+  PlayCircleFilled,
+  PauseCircleFilled,
+  StepBackwardFilled,
+  StepForwardFilled,
+  RetweetOutlined,
+  SearchOutlined,
+  MenuOutlined,
+} from '@ant-design/icons';
+
+const { Header, Content, Footer } = Layout;
+const { Title, Text } = Typography;// import './FullPlayer.module.css';
 import './FullPlayer.css';
 // css 写法： https://www.w3schools.com/react/react_css.asp
 
-const { Content } = Layout;
-const { Title, Text } = Typography;
-
+const lyrics= [
+  { time: 0, text: "作曲：陈小奇" },
+  { time: 5, text: "带走一盏渔火 让他温暖我的双眼" },
+  { time: 10, text: "留下一段真情 让它停泊在枫桥边" },
+  { time: 15, text: "无助的我 已经疏远了那份情感" },
+  { time: 20, text: "许多年以后却发觉 又回到你面前" },
+  { time: 25, text: "留连的钟声 还在敲打我的无眠" },
+  { time: 30, text: "尘封的日子 始终不会是一片云烟" },
+  { time: 35, text: "久违的你 一定保存着那张笑脸" },
+  { time: 40, text: "许多年以后 能不能接受彼此的改变" },
+  { time: 45, text: "月落乌啼总是千年的风霜" },
+];
 export default function FullPlayer() {
+  const [currentLyricIndex, setCurrentLyricIndex] = useState(0);
+
   return (
-    <Layout className="layout">
-      <Content className="content">
-        <div className="player-container">
-          <div className="album-cover">
-            <img src="/placeholder.svg" alt="Album cover - Night scene of a traditional Chinese street" />
-          </div>
-          <div className="song-info">
-            <Title level={3}>倦未了 (忧念版)</Title>
-            <Space direction="vertical" size={1} className="credits">
-              <Text>Bass：李小工作室（小白）</Text>
-              <Text>吉他：聂小慧工作室（石头）</Text>
-              <Text>和声：聂小慧工作室（鱼香肉丝）</Text>
-              <Text>监制：萧跃/Andy</Text>
-              <Text>制作人：聂小慧</Text>
-              <Text type="secondary">未经允许，不得翻唱或者使用</Text>
-            </Space>
-            <div className="lyrics">
-              <Text>前世欠你的债今生却难了</Text>
-              <Text>破镜重圆的人迟迟未到</Text>
-              <Text>缘分被你抛撒在风中萧条</Text>
-              <Text>伤我千遍万遍还嫌少</Text>
-              <Text>前世欠你的债今生却难了</Text>
-              <Text>破镜重圆的人迟迟未到</Text>
-            </div>
-          </div>
-        </div>
-        <div className="player-controls">
-          <Slider defaultValue={1} max={280} />
-          <div className="time-display">
-            <span>00:02</span>
-            <span>04:40</span>
-          </div>
-          <div className="control-buttons">
-            <Button icon={<RetweetOutlined />} />
-            <Button icon={<StepBackwardOutlined />} />
-            <Button icon={<PlayCircleOutlined />} size="large" />
-            <Button icon={<StepForwardOutlined />} />
-            <Button icon={<UnorderedListOutlined />} />
-          </div>
-        </div>
-      </Content>
-    </Layout>
+    <Layout className='full-player-main'>
+      <Content>main content</Content>
+  </Layout>
   );
 }

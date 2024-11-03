@@ -21,7 +21,7 @@ import {
 
 const { Text } = Typography;
 
-export default function MainPlayer(){
+export default function MainPlayer({children}){
 
     const [isPlaying, setIsPlaying] = useState(false)
     const [isMuted, setIsMuted] = useState(false)
@@ -36,6 +36,7 @@ export default function MainPlayer(){
     const audioRef = useRef(null)
 
     const [open, setOpen] = useState(false);
+    const [fullPlayer, setFullPlayer] = useState(false);
 
     useEffect(()=>{
         if(audioRef.current){
@@ -191,9 +192,14 @@ export default function MainPlayer(){
         setOpen(false);
     }
     
+    const toggleFullPlayer = () => {
+        console.log('fullPlayer --> ' + fullPlayer)
+        setFullPlayer(!fullPlayer)
+    }
 
     return (
-        <div className="main-player">
+        <>
+            <div className="main-player">
             <audio 
                 ref={audioRef} 
                 src={playlist[currentTrackIndex].source}
@@ -201,8 +207,7 @@ export default function MainPlayer(){
             {/* 播放信息 */}
             <div className="play-data">
                 <div className="cover">
-                    <Avatar shape="square" size={60} src={playlist[currentTrackIndex].cover} class="cover-img" />
-                    {/* <img src={playlist[currentTrackIndex].cover} class="cover-img" /> */}
+                    <Avatar shape="square" size={60} src={playlist[currentTrackIndex].cover} class="cover-img" onClick={toggleFullPlayer}/>
                 </div>
                 <div className="info text-truncate">
                     <h3 className="name" title={playlist[currentTrackIndex].name}>{playlist[currentTrackIndex].name}</h3>
@@ -316,5 +321,9 @@ export default function MainPlayer(){
                 </Tooltip>
             </div>
         </div>
+
+        {/*全屏播放器*/}
+        {fullPlayer && children }
+        </>
     )
 }

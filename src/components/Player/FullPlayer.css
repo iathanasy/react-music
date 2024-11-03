@@ -1,102 +1,13 @@
-.layout {
-    min-height: 100vh;
-	  background-color:#94a3b8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .content {
-    width: 100%;
-    max-width: 800px;
-    padding: 2rem;
-    color: white;
-  }
-  
-  .player-container {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .album-cover {
-    flex: 0 0 300px;
-  }
-  
-  .album-cover img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .song-info {
-    flex: 1;
-  }
-  
-  .credits {
-    margin-bottom: 1rem;
-  }
-  
-  .lyrics {
-    max-height: 200px;
-    overflow-y: auto;
-  }
-  
-  .lyrics .ant-typography {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  .player-controls {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 1rem;
-  }
-  
-  .time-display {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.5rem;
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  .control-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .control-buttons .ant-btn {
-    color: white;
-    border: none;
-    background: transparent;
-    padding: 15px;
-  }
-  
-  .control-buttons .ant-btn:hover {
-    color: #40a9ff;
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  .control-buttons .ant-btn-lg {
-    font-size: 24px;
-  }
-  
-  /* Custom styles for Ant Design components */
-  .ant-slider-track {
-    background-color: #1890ff;
-  }
-  
-  .ant-slider-handle {
-    border-color: #1890ff;
-  }
-  
-  .ant-typography {
-    color: white;
-  }
-  
-  .ant-typography.ant-typography-secondary {
-    color: rgba(255, 255, 255, 0.7);
-  }
+.full-player-main{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 85%;
+  width: 100%;
+  min-width: min-content;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, .85);
+  border: 1px solid red;
+}

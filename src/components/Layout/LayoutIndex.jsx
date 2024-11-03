@@ -123,9 +123,9 @@ export function LayoutIndex({element}) {
             </Layout>
             {/*播放列表*/}
             {/*全局播放器*/}
-            <MainPlayer />
+            <MainPlayer children={<FullPlayer />}/>
             {/*全屏播放器*/}
-            <FullPlayer />
+            {/* <FullPlayer /> */}
         </>
     )
 }
