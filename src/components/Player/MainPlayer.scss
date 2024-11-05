@@ -12,7 +12,7 @@ main-player-hide{
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  background-color: rgba(255, 255, 255, .85);
+  background-color: rgba(255, 255, 255);
   /* x 偏移量 | y 偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 */
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
 }

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useContext } from "react";
 import {Slider,Affix,Button,Divider, Space, Typography,Tooltip,Drawer,List,Avatar,theme } from "antd";
-import { PlayCircleOutlined,PauseCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined,MenuUnfoldOutlined,SoundOutlined,MutedOutlined,CaretRightOutlined,PauseOutlined,CloseCircleOutlined } from '@ant-design/icons';
+import { PlayCircleOutlined,PauseCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined,MenuUnfoldOutlined,SoundOutlined,MutedOutlined,CaretRightOutlined,PauseOutlined,CloseCircleOutlined,MenuFoldOutlined } from '@ant-design/icons';
 import './MainPlayer.scss'
 import coverImg from '@/assets/placeholder.svg'
 
@@ -44,7 +44,6 @@ export default function MainPlayer(){
         duration, setDuration,
         currentTime, setCurrentTime,
         volume, setVolume,
-        isShuffled, setIsShuffled,
         open, setOpen,
         fullPlayer, setFullPlayer,
         togglePlayPause,
@@ -53,9 +52,6 @@ export default function MainPlayer(){
         handleTimeChange,
         handleVolumeChange,
         toggleMute,
-        selectTrack,
-        clearTrack,
-        clearAll,
         tooltipVolume,
         tooltipTime,
         formatTime,
@@ -147,7 +143,9 @@ export default function MainPlayer(){
                     <span className="vertical"></span>
                 </div>
                 <Tooltip title="播放列表">
-                    <MenuUnfoldOutlined className="play-icon" onClick={showDrawer}/>
+                    {
+                        open ? <MenuFoldOutlined className="play-icon" onClick={closeDrawer}/> : <MenuUnfoldOutlined className="play-icon" onClick={showDrawer}/>
+                    }
                 </Tooltip>
             </div>
         </div>
@@ -160,9 +158,6 @@ export default function MainPlayer(){
 }
 
 const MianPlayDrawer = ()=>{
-    const containerStyle = {
-        position: 'relative'
-      };
     const {
         playlist,
         isPlaying, setIsPlaying,
@@ -174,30 +169,17 @@ const MianPlayDrawer = ()=>{
         clearAll,
         closeDrawer,
     } = useContext(PlayerContext)
-
-    const data = [
-        {
-          title: 'Ant Design Title 1',
-        },
-        {
-          title: 'Ant Design Title 2',
-        },
-        {
-          title: 'Ant Design Title 3',
-        },
-        {
-          title: 'Ant Design Title 4',
-        },
-      ];
     return (
-        <div style={containerStyle}>
+        <div>
             <Drawer
+                // style={{height: '88vh'}}
+                // mask={false}
                 title="播放列表"
                 placement="right"
                 onClose={closeDrawer}
                 open={open}
+                keyboard={true}
                 width={350}
-                height={85}
             >
                 <List
                     size="small"
