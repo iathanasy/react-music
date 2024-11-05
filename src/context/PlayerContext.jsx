@@ -147,6 +147,23 @@ const PlayerContextProvider = (props) =>{
         setIsPlaying(true)
     }
 
+    /**
+     * 删除歌曲
+     * @param {*} index 
+     */
+    const clearTrack =(index)=>{
+        setPlaylist(playlist.filter((f, i)=> i !== index))
+    }
+
+    /**
+     * 清空列表
+     */
+    const clearAll = ()=>{
+        setPlaylist([])
+    }
+
+    
+
     // 格式化音量提示
     const tooltipVolume =(value)=> Math.ceil(value * 100);
     // 格式化歌曲进度条提示
@@ -203,6 +220,8 @@ const PlayerContextProvider = (props) =>{
         handleVolumeChange,
         toggleMute,
         selectTrack,
+        clearTrack,
+        clearAll,
         tooltipVolume,
         tooltipTime,
         formatTime,

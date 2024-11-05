@@ -6,28 +6,84 @@
   width: 100%;
   min-width: min-content;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 15px;
-  background-color: rgba(255, 255, 255, 1);
-  /* border: 1px solid red; */
   /*隐藏滚动条*/
   ::-webkit-scrollbar {
     display: none;
   }
 }
 
-.lyric-list{
+.full-player-header{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  justify-items: flex-end;
+}
+.full-player-wrapper{
+  display: flex;
   justify-content: center;
-  text-align: center;
-  height: 85%;
-  width: 100%;
-  overflow: scroll;
-  li{
-    padding: 10px;
+}
+.full-player-sider{
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .full-player-sider-cover{
+      width: 20rem;
+      height: 20rem;
+      overflow: hidden; /* 防止图片溢出容器 */
+      .cover-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
   }
-  .lyric-active{
-    color: red;
-    font-size: 20px;
-    font-weight:900;
+  .full-player-sider-info{
+    width: 20rem;
+    padding: 20px;
+    .artists{
+      display: block;
+      margin-top: 10px;
+    }
   }
+}
+.full-player-content{
+  .lyric-list{
+    /* border: 1px solid red; */
+    justify-content: center;
+    text-align: center;
+    height: 80vh;
+    width: 100%;
+    overflow: scroll;
+    li{
+      padding: 10px;
+    }
+    .lyric-active{
+      color: red;
+      font-size: 20px;
+      font-weight:900;
+    }
+  }
+}
+
+
+.full-player-footer{
+  height: 6.25rem;
+  line-height: 6.25rem;
+  opacity: 10;
+}
+
+.full-player-bc{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.text-truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

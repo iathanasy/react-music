@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef,useContext } from 'react';
-import { Layout, Typography, Button, Tag, Input, Badge,List } from 'antd';
+import { Layout, Typography, Button, Tag, Input, Badge,List,Flex,Avatar  } from 'antd';
 import { 
   DownOutlined,
+  FullscreenOutlined,
   HeartOutlined,
   PlusOutlined,
   DownloadOutlined,
@@ -19,7 +20,7 @@ import {
   MenuOutlined,
 } from '@ant-design/icons';
 
-const { Header, Content, Footer } = Layout;
+const { Header, Sider, Content, Footer } = Layout;
 const { Title, Text } = Typography;// import './FullPlayer.module.css';
 import './FullPlayer.css';
 import { PlayerContext } from '@/context/PlayerContext';
@@ -32,7 +33,7 @@ export default function FullPlayer() {
   const listRef = useRef(null)
   const {toggleFullPlayer,audioRef,playlist,currentTrackIndex} = useContext(PlayerContext)
 
-  const lrcContent = playlist[currentTrackIndex].lrc
+  const lrcContent = playlist[currentTrackIndex]?.lrc
   useEffect(() => {
     if(!lrcContent) return
     // Parse LRC content
@@ -78,25 +79,42 @@ export default function FullPlayer() {
     }
   }
   return (
-    <div className='full-player-main' >
-        <h2><DownOutlined onClick={toggleFullPlayer}/></h2>
-        <ul className='lyric-list' ref={listRef}>
-          {lrcContent
-            ? lyricLines.map((line, index) => (
-                <li
-                  key={index}
-                  className={`${
-                    index === currentIndex ? 'lyric-active' : ''
-                  }`}
-                  data-index={index}
-                >
-                {line.text}
-                </li>
-              ))
-            :
-            <li>暂无歌词</li>
-          }
-        </ul>
+    <div className='full-player-main full-player-bc'  >
+        <div className='full-player-header full-player-bc'>
+          <h2><DownOutlined onClick={toggleFullPlayer}/></h2>
+          <h2><FullscreenOutlined /></h2>
+        </div>
+        <div className='full-player-wrapper'>
+          <div  className='full-player-sider full-player-bc'>
+                <div className="full-player-sider-cover">
+                    <Avatar shape="square" src={playlist[currentTrackIndex]?.cover} className="cover-img"/>
+                </div>
+                <div className="full-player-sider-info">
+                    <h2 className="name text-truncate" title={playlist[currentTrackIndex]?.name}>{playlist[currentTrackIndex]?.name}</h2>
+                    <span className="artists text-truncate" title={playlist[currentTrackIndex]?.artist}>{playlist[currentTrackIndex]?.artist}</span>
+                </div>
+          </div >
+          <div  className='full-player-content full-player-bc'>
+            <ul className='lyric-list' ref={listRef}>
+              {lrcContent
+                ? lyricLines.map((line, index) => (
+                    <li
+                      key={index}
+                      className={`${
+                        index === currentIndex ? 'lyric-active' : ''
+                      }`}
+                      data-index={index}
+                    >
+                    {line.text}
+                    </li>
+                  ))
+                :
+                <li>暂无歌词</li>
+              }
+            </ul>
+          </div >
+      </div>
+      <footer className='full-player-footer full-player-bc'></footer>
   </div>
   );
 }

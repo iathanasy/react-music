@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useContext } from "react";
-import {Slider,Affix,Button,Divider, Space, Typography,Tooltip,Drawer,List,Avatar } from "antd";
-import { PlayCircleOutlined,PauseCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined,MenuUnfoldOutlined,SoundOutlined,MutedOutlined,CaretRightOutlined,PauseOutlined } from '@ant-design/icons';
+import {Slider,Affix,Button,Divider, Space, Typography,Tooltip,Drawer,List,Avatar,theme } from "antd";
+import { PlayCircleOutlined,PauseCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined,MenuUnfoldOutlined,SoundOutlined,MutedOutlined,CaretRightOutlined,PauseOutlined,CloseCircleOutlined } from '@ant-design/icons';
 import './MainPlayer.scss'
 import coverImg from '@/assets/placeholder.svg'
 
@@ -23,7 +23,18 @@ import FullPlayer from "./FullPlayer";
 
 const { Text } = Typography;
 
+
 export default function MainPlayer(){
+    const {playlist} = useContext(PlayerContext)
+    return (
+        <>
+            {playlist?.length === 0 ? '' : <MainPlayerBody />}
+        </>
+    )
+}
+ function MainPlayerBody(){
+    const { token } = theme.useToken();
+
     const {
         audioRef,
         playlist,
@@ -43,6 +54,8 @@ export default function MainPlayer(){
         handleVolumeChange,
         toggleMute,
         selectTrack,
+        clearTrack,
+        clearAll,
         tooltipVolume,
         tooltipTime,
         formatTime,
@@ -50,22 +63,21 @@ export default function MainPlayer(){
         closeDrawer,
         toggleFullPlayer
     } = useContext(PlayerContext)
-
     return (
-        <>
+        <div className={playlist ? '' : 'main-player-hide'}>
             <div className="main-player">
             <audio 
                 ref={audioRef} 
-                src={playlist[currentTrackIndex].source}
+                src={playlist[currentTrackIndex]?.source}
                 onVolumeChange={()=>{setVolume(audioRef.current.volume)}} />
             {/* 播放信息 */}
             <div className="play-data">
                 <div className="cover">
-                    <Avatar shape="square" size={60} src={playlist[currentTrackIndex].cover} class="cover-img" onClick={toggleFullPlayer}/>
+                    <Avatar shape="square" size={60} src={playlist[currentTrackIndex]?.cover} className="cover-img" onClick={toggleFullPlayer}/>
                 </div>
                 <div className="info text-truncate">
-                    <h3 className="name" title={playlist[currentTrackIndex].name}>{playlist[currentTrackIndex].name}</h3>
-                    <span className="artists" title={playlist[currentTrackIndex].artist}>{playlist[currentTrackIndex].artist}</span>
+                    <h3 className="name" title={playlist[currentTrackIndex]?.name}>{playlist[currentTrackIndex]?.name}</h3>
+                    <span className="artists" title={playlist[currentTrackIndex]?.artist}>{playlist[currentTrackIndex]?.artist}</span>
                 </div>
             </div>
             {/* 控制 */}
@@ -136,48 +148,90 @@ export default function MainPlayer(){
                 </div>
                 <Tooltip title="播放列表">
                     <MenuUnfoldOutlined className="play-icon" onClick={showDrawer}/>
-
-                    <Drawer
-                        title="播放列表"
-                        placement="right"
-                        onClose={closeDrawer}
-                        open={open}
-                        width={350}
-                    >
-                          <List
-                            size="small"
-                            itemLayout="horizontal"
-                            dataSource={playlist}
-                            header={<div className="play-list-header">
-                                    <span>共{playlist.length}首</span>
-                                    <div>
-                                        清空列表
-                                    </div>
-                            </div>}
-                            renderItem={(item, index) => (
-                            <List.Item className={currentTrackIndex === index ?'play-list play-list-active':'play-list'}>
-                                <List.Item.Meta
-                                    avatar={<Avatar shape="square" size={40} src={item.cover} />}
-                                    title={<h5 className="play-list-name text-truncate" title={item.name}>{item.name}</h5>}
-                                    description={<a href="#" className="play-list-artist text-truncate" title={item.artist}>{item.artist}</a>}
-                    
-                                />
-                                {(isPlaying && currentTrackIndex === index) ?
-                                 <PauseCircleOutlined className="play-icon" onClick={togglePlayPause}/> 
-                                 : 
-                                 <PlayCircleOutlined className="play-icon" onClick={() => selectTrack(index)}/>
-                                 }
-                            </List.Item>
-                            )}
-                        />
-                        
-                    </Drawer>
                 </Tooltip>
             </div>
         </div>
 
         {/*全屏播放器*/}
         {fullPlayer && <FullPlayer /> }
-        </>
+        <MianPlayDrawer />
+        </div>
+    )
+}
+
+const MianPlayDrawer = ()=>{
+    const containerStyle = {
+        position: 'relative'
+      };
+    const {
+        playlist,
+        isPlaying, setIsPlaying,
+        currentTrackIndex,setCurrentTrackIndex,
+        open, setOpen,
+        togglePlayPause,
+        selectTrack,
+        clearTrack,
+        clearAll,
+        closeDrawer,
+    } = useContext(PlayerContext)
+
+    const data = [
+        {
+          title: 'Ant Design Title 1',
+        },
+        {
+          title: 'Ant Design Title 2',
+        },
+        {
+          title: 'Ant Design Title 3',
+        },
+        {
+          title: 'Ant Design Title 4',
+        },
+      ];
+    return (
+        <div style={containerStyle}>
+            <Drawer
+                title="播放列表"
+                placement="right"
+                onClose={closeDrawer}
+                open={open}
+                width={350}
+                height={85}
+            >
+                <List
+                    size="small"
+                    itemLayout="horizontal"
+                    dataSource={playlist}
+                    header={<div className="play-list-header">
+                                <span>共{playlist.length}首</span>
+                                <div>
+                                        <Button type="text" onClick={clearAll}>清空列表</Button>
+                                </div>
+                            </div>}
+                    renderItem={(item, index) => (
+                        <List.Item className={currentTrackIndex === index ?'play-list play-list-active':'play-list'}>
+                            <List.Item.Meta
+                                style={{width:'130px'}}
+                                avatar={<Avatar shape="square" size={40} src={item.cover} />}
+                                title={<div className="play-list-name text-truncate" title={item.name}>{item.name}</div>}
+                                description={<a href="#" className="play-list-artist text-truncate" title={item.artist}>{item.artist}</a>}
+                
+                            />
+                            <span>
+                                {(isPlaying && currentTrackIndex === index) ?
+                                <PauseCircleOutlined className="play-icon" onClick={togglePlayPause}/> 
+                                : 
+                                <PlayCircleOutlined className="play-icon" onClick={() => selectTrack(index)}/>
+                                }
+                                &nbsp;
+                                <CloseCircleOutlined className="play-icon" onClick={() => clearTrack(index)}/>
+                            </span>
+                        </List.Item>
+                    )}
+                />
+                
+            </Drawer>
+        </div>
     )
 }
