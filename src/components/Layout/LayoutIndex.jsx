@@ -11,7 +11,7 @@ import {
 import { Button, Layout, Menu, Divider, theme } from 'antd';
 import React, {useState} from "react";
 import {useLocation, useNavigate} from "react-router-dom";
-const { Header, Sider, Content } = Layout;
+const { Header, Sider, Content,Footer } = Layout;
 
 import './LayoutIndex.scss'
 import LogoVite from '@/assets/vite.svg'
@@ -113,12 +113,13 @@ export function LayoutIndex({element}) {
                             padding: 24,
                             minHeight: 280,
                             background: colorBgContainer,
-                            borderRadius: borderRadiusLG,
+                            borderRadius: borderRadiusLG
                         }}
                     >
                         {/* 指定路由组件呈现的位置 */}
-                        <div>{element}</div>
+                        <div className='layout-content'>{element}</div>
                     </Content>
+
                 </Layout>
             </Layout>
             {/*播放列表*/}
