@@ -3,18 +3,7 @@ import {lazy, Suspense} from "react";
 import Login from "@/pages/Login/index.jsx";
 import Home from '@/pages/Home/index.jsx';
 
-const Discover = lazy(() => import('@/pages/Discover/layout.jsx'))
-const DiscoverPlayLists = lazy(() => import('@/pages/Discover/playlists.jsx'))
-const DiscoverTopLists = lazy(() => import('@/pages/Discover/toplists.jsx'))
-const DiscoverNew = lazy(() => import('@/pages/Discover/new.jsx'))
-const DiscoverArtists = lazy(() => import('@/pages/Discover/artists.jsx'))
-
-
-const Artist = lazy(() => import('@/pages/Artist/layout'))
-const ArtistAlbums = lazy(() => import('@/pages/Artist/albums'))
-const ArtistSongs = lazy(() => import('@/pages/Artist/songs'))
-
-
+const Artist = lazy(() => import('@/pages/List/artist'))
 const PlayList = lazy(() => import('@/pages/List/playlist'))
 const Album = lazy(() => import('@/pages/List/album'))
 
@@ -29,59 +18,10 @@ const router = [
         path: '/',
         element: <Suspense fallback={'加载中'}><Home /></Suspense>
     },
-    // 发现
-    {
-        path: '/discover',
-        element: <Suspense fallback={'加载中'}><Discover /></Suspense>,
-        children: [
-            //歌单广场
-            {
-                index: true,
-                element: <Suspense fallback={'加载中'}><DiscoverPlayLists /></Suspense>
-            },
-            {
-                path: 'playlists',
-                element: <Suspense fallback={'加载中'}><DiscoverPlayLists /></Suspense>
-            },
-            //排行榜
-            {
-                path: 'toplists',
-                element: <Suspense fallback={'加载中'}><DiscoverTopLists /></Suspense>
-            },
-            //最新音乐
-            {
-                path: 'new',
-                element: <Suspense fallback={'加载中'}><DiscoverNew /></Suspense>
-            },
-            //歌手
-            {
-                path: 'artists',
-                element: <Suspense fallback={'加载中'}><DiscoverArtists /></Suspense>
-            }
-        ]
-
-    },
     //歌手
     {
         path: '/artist',
         element: <Suspense fallback={'加载中'}><Artist /></Suspense>,
-        children: [
-            //专辑
-            {
-                index: true,
-                element: <Suspense fallback={'加载中'}><ArtistAlbums /></Suspense>
-            },
-            {
-                path: 'albums',
-                element: <Suspense fallback={'加载中'}><ArtistAlbums /></Suspense>
-            },
-            //单曲
-            {
-                path: 'songs',
-                element: <Suspense fallback={'加载中'}><ArtistSongs /></Suspense>
-            }
-        ]
-
     },
     //歌单
     {

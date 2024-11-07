@@ -2,16 +2,27 @@ import React from 'react'
 
 import { Avatar } from 'antd';
 import styles from './artistlist.module.scss'
+import { NavLink, useNavigate } from 'react-router-dom';
 
 /**
  * 歌手列表
  * @returns 
  */
-const ArtistList = ({data}) => {
+const ArtistListComponent = ({data}) => {
+  const navigate = useNavigate()
+  const detail=(item)=>{
+    navigate('/artist?id=' +item.id, {
+      state: {
+        id: item.id,
+        type: 'artist',
+        name: item.name
+      }
+    })
+  }
   return (
     <div className={styles.rows}>
       {data.map((item,index)=> 
-        <div title={item.name} className={styles.cover_col}>
+        <div key={index} title={item.name} className={styles.cover_col} onClick={()=>detail(item)}>
             <div className={styles.cover_img}>
               <Avatar
                 size={{
@@ -29,8 +40,9 @@ const ArtistList = ({data}) => {
         </div>
         
       )}
+      {!data && '空空如也，怎么什么都没有啊'}
     </div>
   )
 }
 
-export default ArtistList
+export default ArtistListComponent

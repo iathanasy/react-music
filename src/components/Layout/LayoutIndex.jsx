@@ -6,7 +6,9 @@ import {
     UserOutlined,
     VideoCameraOutlined,
     MutedOutlined,
-    HomeOutlined
+    HomeOutlined,
+    LeftCircleOutlined,
+    RightCircleOutlined
 } from '@ant-design/icons';
 import { Button, Layout, Menu, Divider, theme } from 'antd';
 import React, {useState} from "react";
@@ -23,11 +25,6 @@ const items=[
         label: '首页',
         key: '/',
         icon: <HomeOutlined />,
-    },
-    {
-        label: '发现音乐',
-        key: '/discover',
-        icon: <HeartOutlined />,
     },
     {
         label: '歌手',
@@ -54,6 +51,14 @@ export function LayoutIndex({element}) {
     const navigate = useNavigate()
     const onMenuClick = ( value ) => {
         navigate( value.key )
+    }
+
+    function back(){
+        navigate(-1)
+    }
+
+    function forward(){
+        navigate(1)
     }
 
     // 菜单高亮
@@ -97,10 +102,29 @@ export function LayoutIndex({element}) {
                     >
                         <Button
                             type="text"
-                            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+                            icon={collapsed ? <MenuUnfoldOutlined style={{fontSize: '23px'}}/> : <MenuFoldOutlined style={{fontSize: '23px'}}/>}
                             onClick={() => setCollapsed(!collapsed)}
                             style={{
-                                fontSize: '16px',
+                                width: 64,
+                                height: 64,
+                            }}
+                        />
+
+                        <Button
+                            type="text"
+                            icon={<LeftCircleOutlined style={{fontSize: '23px'}}/>}
+                            onClick={back}
+                            style={{
+                                width: 64,
+                                height: 64,
+                            }}
+                        />
+                        
+                        <Button
+                            type="text"
+                            icon={<RightCircleOutlined style={{fontSize: '23px'}}/>}
+                            onClick={forward}
+                            style={{
                                 width: 64,
                                 height: 64,
                             }}
