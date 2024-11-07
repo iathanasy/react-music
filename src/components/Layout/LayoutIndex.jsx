@@ -137,7 +137,7 @@ export function LayoutIndex({element}) {
                             padding: 24,
                             minHeight: 280,
                             background: colorBgContainer,
-                            borderRadius: borderRadiusLG
+                            borderRadius: borderRadiusLG,
                         }}
                     >
                         {/* 指定路由组件呈现的位置 */}
