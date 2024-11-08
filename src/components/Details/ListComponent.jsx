@@ -17,7 +17,6 @@ import {
  * @returns [歌单、歌手、专辑] 列表详情
  */
 const ListComponent = () => {
-  const {playlistAll,jonPlaylist} = useContext(PlayerContext)
   const [search,setSearch] = useSearchParams()
   const id = search.get('id')
   const x = useLocation()
@@ -39,6 +38,7 @@ const ListComponent = () => {
       const alist = a.length > 0 ? a[0] : {}
       return (
         <HeaderDetail list={artistDetailsData.list} name={alist.name} pic={alist.pic} desc={artistDetailsData.desc}>
+          <h2>歌曲列表</h2>
           <SongList data={artistDetailsData.list}/>
         </HeaderDetail>
       )
@@ -48,6 +48,7 @@ const ListComponent = () => {
 }
 
 export const HeaderDetail = (props)=>{
+  const {playlistAll,jonPlaylist} = useContext(PlayerContext)
   const {list, name, pic, desc, ctime, children} = props
   return (
     <div className={styles.container}>
