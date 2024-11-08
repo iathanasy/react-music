@@ -24,6 +24,7 @@ const { Header, Sider, Content, Footer } = Layout;
 const { Title, Text } = Typography;// import './FullPlayer.module.css';
 import './FullPlayer.css';
 import { PlayerContext } from '@/context/PlayerContext';
+import { NavLink } from 'react-router-dom';
 // css 写法： https://www.w3schools.com/react/react_css.asp
 
 
@@ -33,17 +34,18 @@ export default function FullPlayer() {
   const listRef = useRef(null)
   const {toggleFullPlayer,audioRef,playlist,currentTrackIndex} = useContext(PlayerContext)
 
-  const lrcContent = playlist[currentTrackIndex]?.lrc
+  const lrcContent = playlist[currentTrackIndex]?.lyric
   useEffect(() => {
     if(!lrcContent) return
     // Parse LRC content
     const lines = lrcContent.split('\n')
     const parsedLyrics = lines
       .map(line => {
-        const match = line.match(/\[(\d{2}):(\d{2})\.(\d{2})\](.*)/)
+        const match = line.match(/\[(\d{2}):(\d{2})\.(\d{2,3})\](.*)/)
         if (match) {
           const [,minutes, seconds, hundredths, text] = match
           const time = parseInt(minutes) * 60 + parseInt(seconds) + parseInt(hundredths) / 100
+          console.log(time + ''+ line)
           return  { time: time, text: text.trim() }
         }
         return null
@@ -87,11 +89,19 @@ export default function FullPlayer() {
         <div className='full-player-wrapper'>
           <div  className='full-player-sider full-player-bc'>
                 <div className="full-player-sider-cover">
-                    <Avatar shape="square" src={playlist[currentTrackIndex]?.cover} className="cover-img"/>
+                    <Avatar shape="square" src={playlist[currentTrackIndex]?.pic} className="cover-img"/>
                 </div>
                 <div className="full-player-sider-info">
                     <h2 className="name text-truncate" title={playlist[currentTrackIndex]?.name}>{playlist[currentTrackIndex]?.name}</h2>
-                    <span className="artists text-truncate" title={playlist[currentTrackIndex]?.artist}>{playlist[currentTrackIndex]?.artist}</span>
+                    {playlist[currentTrackIndex]?.artist.map((item) => {
+                        return (
+                        <NavLink key={item.id} to={`/artist?id=${item.id}`}>
+                            <span className="artists text-truncate" title={item.name}>
+                                {item.name}
+                            </span>
+                        </NavLink>
+                        );
+                    })}
                 </div>
           </div >
           <div  className='full-player-content full-player-bc'>

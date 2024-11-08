@@ -1,18 +1,8 @@
 export const tracks = [
-    { name: "诡计", artist: "金渔", cover: "/music/img/1.jpg", source: "/music/mp3/诡计-金渔.mp3", lrc: "[ti:诡计]\n[ar:金渔]\n[al:诡计]\n[by:v_ttzhang]\n[offset:0]\n[00:00.00]诡计 - 金渔\n[00:02.45]词：叶子@左白里\n[00:03.42]曲：叶子@左白里\n[00:03.64]编曲：马明烨\n[00:03.93]吉他：马明烨\n[00:04.74]和声：雪菜Shelly\n[00:04.91]混音\/母带：李欣懋（Wuli包子）\n[00:05.22]混音助理：刘明\n[00:05.68]制作人：江山@左白里\n[00:06.58]统筹：小静@左白里\/孙言莞尔\n[00:07.01]制作团队：左白里Studio\n[00:08.15]监制：何湲\/白冬雨@左白里\n[00:08.54]出品：飞行工作室\n[00:08.78]词曲提供：词曲家\n[00:09.00]发行：讯飞音乐\n[00:09.78]未经著作权人书面许可，不得以任何方式（包括翻唱、翻录等）使用\n[00:16.48]爱若亦成冰便压抑了心\n[00:19.76]若即若离实在难为当时动了情\n[00:23.19]风若夜里行雨便作回应\n[00:26.49]雷雨交加不枉你我当时忘了情\n[00:29.43]我就在背后做否定藏起这哭泣\n[00:32.70]我不问是否变了心一醉到酩酊\n[00:36.02]我不是天生就薄情试探你任凭\n[00:39.30]谁不答我便就不应\n[00:42.24]我在你自尊背后赢\n[00:44.45]让你愤怒着背弃\n[00:46.17]戳穿还定义剥夺你的自卫令\n[00:49.46]心尖下沉掘弃\n[00:51.17]提起防御软禁\n[00:52.76]挥霍你负我的真心\n[00:55.58]我试着麻木忘记你的眼睛\n[00:58.92]我试着抓住你爱我的把柄\n[01:02.22]我试着辜负你的走进\n[01:04.46]取代你的降临\n[01:05.92]看穿你虚伪时的聪明\n[01:08.91]我试着麻木忘记你的声音\n[01:12.23]我试着放下怪罪给我自己\n[01:15.53]我试着同情我的决定淘汰你的批评\n[01:19.33]为你的伎俩定个名义\n[01:35.50]我在你自尊背后赢\n[01:37.82]让你愤怒着背弃\n[01:39.56]戳穿还定义剥夺你的自卫令\n[01:42.81]心尖下沉掘弃\n[01:44.45]提起防御软禁\n[01:46.08]挥霍你负我的真心\n[01:48.88]我试着麻木忘记你的眼睛\n[01:52.14]我试着抓住你爱我的把柄\n[01:55.47]我试着辜负你的走进\n[01:57.75]取代你的降临\n[01:59.20]看穿你虚伪时的聪明\n[02:02.24]我试着麻木忘记你的声音\n[02:05.46]我试着放下怪罪给我自己\n[02:08.80]我试着同情我的决定淘汰你的批评\n[02:12.58]为你的伎俩定个名义\n[02:15.61]我试着麻木忘记你的眼睛\n[02:18.83]我试着抓住你爱我的把柄\n[02:22.18]我试着辜负你的走进\n[02:24.48]取代你的降临\n[02:26.07]看穿你虚伪时的聪明\n[02:28.97]我试着麻木忘记你的声音\n[02:32.11]我试着放下怪罪给我自己\n[02:35.47]我试着同情我的决定淘汰你的批评\n[02:39.31]为你的伎俩定个名义\n[02:43.34]哈哈你的把戏哈哈我的诡计\n[02:46.56]哈哈铃儿在响风摇的诡异\n[02:49.98]哈哈电闪雷鸣哈哈假想逃避\n[02:53.21]哈哈破解你的爱我的心敌\n[02:56.16]诡计\n"},
-    { name: "Mekanın Sahibi大神大大大盛大的反反复复发反反复复发发发", artist: "Norm Ender大发啊发发发发发反反复复发反反复复反反复复反反复复反反复复", cover: "/music/img/1.jpg", source: "/music/mp3/1.mp3", url: "https://www.youtube.com/watch?v=z3wAjJXbYzA", favorited: false },
-    { name: "Track 2", artist: "Artist 2", cover: "/music/img/2.jpg", source: "/music/mp3/2.mp3" },
-    { name: "Track 3", artist: "Artist 3", cover: "/music/img/3.jpg", source: "/music/mp3/3.mp3"},
-    { name: "Track 4", artist: "Artist 4", cover: "/music/img/4.jpg", source: "/music/mp3/4.mp3"},
-    { name: "Track 5", artist: "Artist 5", cover: "/music/img/5.jpg", source: "/music/mp3/5.mp3"},
-    { name: "Track 6", artist: "Artist 6", cover: "/music/img/6.jpg", source: "/music/mp3/6.mp3"},
-    { name: "Track 7", artist: "Artist 7", cover: "/music/img/7.jpg", source: "/music/mp3/7.mp3"},
-    { name: "Track 8", artist: "Artist 8", cover: "/music/img/8.jpg", source: "/music/mp3/8.mp3"},
-    { name: "Track 9", artist: "Artist 9", cover: "/music/img/9.jpg", source: "/music/mp3/9.mp3"},
-    { name: "Track 10", artist: "Artist 10", cover: "/music/img/8.jpg", source: "/music/mp3/8.mp3"},
-    { name: "Track 11", artist: "Artist 11", cover: "/music/img/9.jpg", source: "/music/mp3/9.mp3"},
-    { name: "Track 12", artist: "Artist 12", cover: "/music/img/8.jpg", source: "/music/mp3/8.mp3"},
-    { name: "Track 13", artist: "Artist 13", cover: "/music/img/91.jpg", source: "/music/mp3/91.mp3"},
+    {id:"74oMW", name: "诡计", time: 192,"artist": [{"id": "NGPp","name": "金渔"}],"album": {"id": "9Jv1Q","name": "诡计","pic": "https://img3.kuwo.cn/star/albumcover/400/s3s57/4/888078243.jpg"}, pic: "/music/img/1.jpg", url: "/music/mp3/诡计-金渔.mp3", lyric: "[ti:诡计]\n[ar:金渔]\n[al:诡计]\n[by:v_ttzhang]\n[offset:0]\n[00:00.00]诡计 - 金渔\n[00:02.45]词：叶子@左白里\n[00:03.42]曲：叶子@左白里\n[00:03.64]编曲：马明烨\n[00:03.93]吉他：马明烨\n[00:04.74]和声：雪菜Shelly\n[00:04.91]混音\/母带：李欣懋（Wuli包子）\n[00:05.22]混音助理：刘明\n[00:05.68]制作人：江山@左白里\n[00:06.58]统筹：小静@左白里\/孙言莞尔\n[00:07.01]制作团队：左白里Studio\n[00:08.15]监制：何湲\/白冬雨@左白里\n[00:08.54]出品：飞行工作室\n[00:08.78]词曲提供：词曲家\n[00:09.00]发行：讯飞音乐\n[00:09.78]未经著作权人书面许可，不得以任何方式（包括翻唱、翻录等）使用\n[00:16.48]爱若亦成冰便压抑了心\n[00:19.76]若即若离实在难为当时动了情\n[00:23.19]风若夜里行雨便作回应\n[00:26.49]雷雨交加不枉你我当时忘了情\n[00:29.43]我就在背后做否定藏起这哭泣\n[00:32.70]我不问是否变了心一醉到酩酊\n[00:36.02]我不是天生就薄情试探你任凭\n[00:39.30]谁不答我便就不应\n[00:42.24]我在你自尊背后赢\n[00:44.45]让你愤怒着背弃\n[00:46.17]戳穿还定义剥夺你的自卫令\n[00:49.46]心尖下沉掘弃\n[00:51.17]提起防御软禁\n[00:52.76]挥霍你负我的真心\n[00:55.58]我试着麻木忘记你的眼睛\n[00:58.92]我试着抓住你爱我的把柄\n[01:02.22]我试着辜负你的走进\n[01:04.46]取代你的降临\n[01:05.92]看穿你虚伪时的聪明\n[01:08.91]我试着麻木忘记你的声音\n[01:12.23]我试着放下怪罪给我自己\n[01:15.53]我试着同情我的决定淘汰你的批评\n[01:19.33]为你的伎俩定个名义\n[01:35.50]我在你自尊背后赢\n[01:37.82]让你愤怒着背弃\n[01:39.56]戳穿还定义剥夺你的自卫令\n[01:42.81]心尖下沉掘弃\n[01:44.45]提起防御软禁\n[01:46.08]挥霍你负我的真心\n[01:48.88]我试着麻木忘记你的眼睛\n[01:52.14]我试着抓住你爱我的把柄\n[01:55.47]我试着辜负你的走进\n[01:57.75]取代你的降临\n[01:59.20]看穿你虚伪时的聪明\n[02:02.24]我试着麻木忘记你的声音\n[02:05.46]我试着放下怪罪给我自己\n[02:08.80]我试着同情我的决定淘汰你的批评\n[02:12.58]为你的伎俩定个名义\n[02:15.61]我试着麻木忘记你的眼睛\n[02:18.83]我试着抓住你爱我的把柄\n[02:22.18]我试着辜负你的走进\n[02:24.48]取代你的降临\n[02:26.07]看穿你虚伪时的聪明\n[02:28.97]我试着麻木忘记你的声音\n[02:32.11]我试着放下怪罪给我自己\n[02:35.47]我试着同情我的决定淘汰你的批评\n[02:39.31]为你的伎俩定个名义\n[02:43.34]哈哈你的把戏哈哈我的诡计\n[02:46.56]哈哈铃儿在响风摇的诡异\n[02:49.98]哈哈电闪雷鸣哈哈假想逃避\n[02:53.21]哈哈破解你的爱我的心敌\n[02:56.16]诡计\n"},
+    {id:"74o04", name: "再见只是陌生人", time: 226,"artist": [{"id": "kOog","name": "半吨兄弟"}],"album": {"id": "rvAXQ","name": "再见只是陌生人","pic": "https://img2.kuwo.cn/star/albumcover/400/2/6/2011422113.jpg"}, pic: "https://img2.kuwo.cn/star/albumcover/400/2/6/2011422113.jpg", url: "/music/mp3/再见只是陌生人-半吨兄弟.mp3", lyric: "[ti:]\n[ar:]\n[al:]\n[by:天琴实验室AI生成v1.0]\n[offset:0]\n[00:00.00]再见只是陌生人-半吨兄弟\n[00:11.97]作词Lyrics：林华勇\/赖剑亮\n[00:23.94]作曲Composer：林华勇\n[00:25.59]编曲Arrangement：左壬鹏\n[00:29.13]音乐制作人Producer：郭朝阳\n[00:32.37]吉他Guitar：潘春宇\n[00:34.32]钢琴Piano：王浩铭\n[00:37.26]录音Sound recording：周明\n[00:38.73]录音棚Recording studio：半吨兄弟Music studio\n[00:40.80]Voc 制作人Voc Producer：周明\n[00:41.61]和声编写Harmony writing：王博玄\n[00:44.19]和声Concord：英子\n[00:48.99]混音母带处理Voc producer mixing, mastering：周明\n[00:53.37]混音母带棚Mix, Master Band Shed：半吨兄弟Music studio\n[00:55.26]统筹：唐欣宇\/张丹娴\/许沁杨\n[00:58.89]监制：若心\/胡伟\n[01:02.94]出品：致力音乐\n[01:03.84]爱过你就当你是错的人\n[01:06.54]有些错我们都要负责任\n[01:10.20]是否我爱了不该爱的人\n[01:11.85]其实我想要的并不过分\n[01:13.47]爱过你至少我坦诚承认\n[01:14.31]有些错我们不用去争论\n[01:16.08]也许我错过幸福的时分\n[01:17.16]这座城多了个伤心的人\n[01:21.87]我们爱的难舍难分爱的奋不顾身\n[01:24.75]为何再见只是陌生人\n[01:27.57]夜来得无声我的心好冷\n[01:31.05]那绝望比分手更伤人\n[01:34.35]我们爱的难舍难分爱的奋不顾身\n[01:39.51]爱到最后同样不可能\n[01:45.24]你走得无痕我的心好疼\n[01:51.12]该拿什么与眼泪抗衡\n[02:20.43]爱过你至少我坦诚承认\n[02:26.22]有些错我们不用去争论\n[02:32.07]也许我错过幸福的时分\n[02:37.92]这座城多了个伤心的人\n[02:43.86]我们爱的难舍难分爱的奋不顾身\n[02:49.74]为何再见只是陌生人\n[02:55.53]夜来得无声我的心好冷\n[03:01.38]那绝望比分手更伤人\n[03:07.26]我们爱的难舍难分爱的奋不顾身\n[03:13.17]爱到最后同样不可能\n[03:18.90]你走得无痕我的心好疼\n[03:24.81]该拿什么与眼泪抗衡\n[03:30.72]你走得无痕我的心好疼\n[03:36.54]该拿什么与眼泪抗衡\n"},
+    {id:"5gZa6", name: "光阴的故事", time: 212,"artist": [{"id": "R7J9","name": "黄晓明"},{"id": "k23o","name": "邓超"},{"id": "j1w7","name": "佟大为"}],"album": {"id": "XVw7n","name": "光阴的故事","pic": "https://p1.music.126.net/3K6W80SyZ0ZIy3btLRlZMw==/7820826208648668.jpg"}, pic: "https://p1.music.126.net/3K6W80SyZ0ZIy3btLRlZMw==/7820826208648668.jpg", url: "/music/mp3/光阴的故事-晓明邓超佟大为.mp3", lyric: "[00:00.000] 作词 : 罗大佑\n[00:01.000] 作曲 : 罗大佑\n[00:14.380]春天的花开秋天的风\n[00:17.550]以及冬天的落阳\n[00:21.630]忧郁的青春年少的我\n[00:24.770]曾经无知的这么想\n[00:28.230]\n[00:28.480]风车在四季轮回的歌里\n[00:32.360]它天天的流转\n[00:36.000]风花雪月的诗句里\n[00:39.000]我在年年的成长\n[00:43.320]流水它带走光阴的故事\n[00:46.920]改变了一个人\n[00:50.500]就在那多愁善感而初次\n[00:54.140]等待的青春\n[00:56.850]\n[01:12.550]发黄的相片古老的信\n[01:15.290]以及褪色的圣诞卡\n[01:19.560]年轻时为你写的歌\n[01:22.560]恐怕你早已忘了吧\n[01:27.010]过去的誓言\n[01:28.560]就像那课本里缤纷的书签\n[01:33.980]刻画着多少美丽的诗\n[01:37.140]可是终究是一阵烟\n[01:41.250]流水它带走光阴的故事\n[01:44.750]改变了三个人\n[01:48.870]就在那多愁善感而初次\n[01:52.300]流泪的青春\n[01:55.330]\n[02:10.640]遥远的路程昨日的梦\n[02:13.550]以及远去的笑声\n[02:17.600]再次的见面我们\n[02:20.240]又历经了多少的路程\n[02:25.130]不再是旧日熟悉的我\n[02:28.030]有着旧日狂热的梦\n[02:32.380]也不是旧日熟悉的你\n[02:35.370]有着依然的笑容\n[02:39.410]流水它带走光阴的故事\n[02:43.270]改变了我们\n[02:46.930]就在那多愁善感而初次\n[02:50.480]回忆的青春\n[02:54.280]流水它带走光阴的故事\n[02:57.750]改变了我们\n[03:01.460]就在那多愁善感而初次\n[03:05.120]回忆的青春\n[03:08.500]\n"},
+
 ]
 // 歌单
 export const playlistData = [
@@ -536,9 +526,9 @@ export const songData = [
     {
       "id": "jJ6w7",
       "lyric": null,
-      "url": null,
-      "name": "一格格（0.8x）",
-      "pic": null,
+      "url": '/music/mp3/1.mp3',
+      "name": "track 1",
+      "pic": '/music/mp3/1.jpg',
       "time": 236,
       "album": {
         "id": "9JvBo",
@@ -551,28 +541,14 @@ export const songData = [
           "name": "一支流年"
         }
       ],
-      "user": {
-        "uid": 160635,
-        "username": "mcfsp521"
-      },
     },
     {
       "id": "74oMW",
       "lyric": null,
-      "url": null,
-      "name": "诡计",
-      "pic": null,
+      "url": '/music/mp3/2.mp3',
+      "name": "track 2",
+      "pic": '/music/mp3/2.jpg',
       "time": 192,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
       "album": {
         "id": "9Jv1Q",
         "name": "诡计",
@@ -583,30 +559,15 @@ export const songData = [
           "id": "NGPp",
           "name": "金渔"
         }
-      ],
-      "user": {
-        "uid": 77162,
-        "username": "蒹葭苍苍"
-      },
-      "hash": "b3f634HzOLrfMF9SfoF49YVHNExFQxJ3UnzN7e6QFgq11Tm_yOBQ"
+      ]
     },
     {
       "id": "ge0Yl",
       "lyric": null,
-      "url": null,
-      "name": "好想再爱你",
-      "pic": null,
+      "url": '/music/mp3/3.mp3',
+      "name": "track 3",
+      "pic": '/music/mp3/3.jpg',
       "time": 267,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
       "album": {
         "id": "Vpw5e",
         "name": "好想再爱你",
@@ -617,30 +578,15 @@ export const songData = [
           "id": "kOog",
           "name": "半吨兄弟"
         }
-      ],
-      "user": {
-        "uid": 125430,
-        "username": "y270"
-      },
-      "hash": "b3f634HzOLrfMF9SfoFxrYlaTRREFzZ6GnWR7LfIFiqZ2Tmn1OxY"
+      ]
     },
     {
       "id": "74o04",
       "lyric": null,
-      "url": null,
-      "name": "再见只是陌生人",
-      "pic": null,
+      "url": '/music/mp3/4.mp3',
+      "name": "track 4",
+      "pic": '/music/mp3/4.jpg',
       "time": 226,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
       "album": {
         "id": "rvAXQ",
         "name": "再见只是陌生人",
@@ -651,30 +597,15 @@ export const songData = [
           "id": "kOog",
           "name": "半吨兄弟"
         }
-      ],
-      "user": {
-        "uid": 103041,
-        "username": "jim71"
-      },
-      "hash": "b3f634HzOLrfMF9SfoFgxZwSaEUlRxJ7XnTFwKvUFg6V1TmrxPhY"
+      ]
     },
     {
       "id": "x589g",
       "lyric": null,
-      "url": null,
-      "name": "离别的秋天(单曲)",
-      "pic": null,
+      "url": '/music/mp3/5.mp3',
+      "name": "track 5",
+      "pic": '/music/mp3/5.jpg',
       "time": 263,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
       "album": {
         "id": "ABvVj",
         "name": "深情流露1",
@@ -685,30 +616,15 @@ export const songData = [
           "id": "k41J",
           "name": "孙露"
         }
-      ],
-      "user": {
-        "uid": 168563,
-        "username": "侃客听音乐"
-      },
-      "hash": "b3f634HzOLrfMF9SfoA1oNVGeQxRYxMnZmDF6LfQGjqR2Sm7wOhc"
+      ]
     },
     {
       "id": "WPBpK",
       "lyric": null,
-      "url": null,
-      "name": "Smart",
-      "pic": null,
+      "url": '/music/mp3/6.mp3',
+      "name": "track 6",
+      "pic": '/music/mp3/6.jpg',
       "time": 166,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
       "album": {
         "id": "Q0wo5",
         "name": "EASY",
@@ -719,30 +635,15 @@ export const songData = [
           "id": "Ll9J",
           "name": "LE SSERAFIM"
         }
-      ],
-      "user": {
-        "uid": 89648,
-        "username": "wangzhibo"
-      },
-      "hash": "b3f634HzOLrfMF9SfoAs4ZQfOGENQw53Uz2YqcfAEiKxxSGr7PhY"
+      ]
     },
     {
       "id": "e3Llq",
       "lyric": null,
-      "url": null,
-      "name": "願いは光になって",
-      "pic": null,
+      "url": '/music/mp3/7.mp3',
+      "name": "track 7",
+      "pic": '/music/mp3/7.jpg',
       "time": 264,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
       "album": {
         "id": "Jlj3A",
         "name": "プロローグ -Star Divine-",
@@ -753,30 +654,15 @@ export const songData = [
           "id": "wEKB",
           "name": "スタァライト九九組"
         }
-      ],
-      "user": {
-        "uid": 129590,
-        "username": "LYK5555"
-      },
-      "hash": "b3f634HzOLrfMF9SfoAo5ZwaeFEhRwZjRmDMveqIDiaR0SW3wOg"
+      ]
     },
     {
       "id": "2AoMB",
       "lyric": null,
-      "url": null,
-      "name": "約束タワー",
-      "pic": null,
+      "url": '/music/mp3/8.mp3',
+      "name": "track 8",
+      "pic": '/music/mp3/8.jpg',
       "time": 297,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
       "album": {
         "id": "xxGga",
         "name": "約束タワー",
@@ -787,30 +673,15 @@ export const songData = [
           "id": "wEKB",
           "name": "スタァライト九九組"
         }
-      ],
-      "user": {
-        "uid": 70886,
-        "username": "liiiii"
-      },
-      "hash": "b3f634HzOLrfMF9SfoFY8Y1WdR0YGkZ_RzGF-efcBj61ySGrwPQ"
+      ]
     },
     {
       "id": "ynV6g",
       "lyric": null,
-      "url": null,
-      "name": "Always Remember Us This Way(Complete version originally performed by Lady Gaga)",
-      "pic": null,
+      "url": '/music/mp3/9.mp3',
+      "name": "track 9",
+      "pic": '/music/mp3/9.jpg',
       "time": 209,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
       "album": {
         "id": "JlwX8",
         "name": "Always Remember Us This Way (Karaoke)",
@@ -821,54 +692,7 @@ export const songData = [
           "id": "kQAv",
           "name": "Lady Gaga"
         }
-      ],
-      "user": {
-        "uid": 16778,
-        "username": "shanshan"
-      },
-      "hash": "b3f634HzOLrfMF9SfoFc8ZVCSQENUlJnWzGF_KvAFjqJ0S230OxE"
-    },
-    {
-      "id": "957V7",
-      "lyric": null,
-      "url": null,
-      "name": "Under Bright Lights(feat. Indy Skies)",
-      "pic": null,
-      "time": 228,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "OJx5x",
-        "name": "Under Bright Lights (feat. Indy Skies)",
-        "pic": "https://img3.kuwo.cn/star/albumcover/{size}/92/17/3528475823.jpg"
-      },
-      "artist": [
-        {
-          "id": "LJrl",
-          "name": "Twerl"
-        },
-        {
-          "id": "v4E1",
-          "name": "Ekko & Sidetrack"
-        },
-        {
-          "id": "Kv15",
-          "name": "Indy Skies"
-        }
-      ],
-      "user": {
-        "uid": 132493,
-        "username": "李建壮"
-      },
-      "hash": "b3f634HzOLrfMF9SfoFloYlOYRxFZxp2BymV-LfYFiqd_TGD6PxU"
+      ]
     }
 ]
 
@@ -879,1286 +703,15 @@ export const playlistDetailsData = {
   "description": "音乐是情感的良药，好听的歌总能触动最柔软的地方。抖音热门精选，抓耳节奏，让你一秒就沦陷~",
   "pic": "https://i.postimg.cc/nXLRMbp1/20240318142601193692.jpg",
   "create_time": "2024-06-30 20:16:28",
-  "list": [
-    {
-      "id": "L3L6P",
-      "name": "若月亮没来 (若是月亮还没来)",
-      "pic": null,
-      "url": null,
-      "time": 173,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "y45Qo",
-        "name": "若月亮没来 (若是月亮还没来)",
-        "pic": "https://img1.kuwo.cn/star/albumcover/{size}/s3s39/78/3706899348.jpg"
-      },
-      "artist": [
-        {
-          "id": "evxe",
-          "name": "王宇宙Leto"
-        },
-        {
-          "id": "V822",
-          "name": "乔浚丞"
-        }
-      ],
-      "user": null,
-      "hash": "b3f634HzOLrfMF9SfoFk_ZwSYQ0EGzZ6ByWR4ef8EiKN3TGv7PxQ"
-    },
-    {
-      "id": "EwGx",
-      "name": "我走后",
-      "pic": null,
-      "url": null,
-      "time": 248,
-      "lyric": null,
-      "quality": [
-        {
-          "name": "128"
-        },
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "ooQa",
-        "name": "我走后",
-        "pic": "https://i.biliimg.com/bfs/im/34712f04bfb8d0c46437dbdddc0974267341e7d6.png@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "3EeV",
-          "name": "小咪"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "d3f636iePH3nJMVUD1wLsGTqzerBgvu82RtanB57beUILiniZdf2r"
-    },
-    {
-      "id": "oQVV5",
-      "name": "天下的乌鸦一般黑",
-      "pic": null,
-      "url": null,
-      "time": 160,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "Q0wpp",
-        "name": "天下的乌鸦一般黑",
-        "pic": "https://img4.kuwo.cn/star/albumcover/{size}/s3s99/7/3829896180.jpg"
-      },
-      "artist": [
-        {
-          "id": "0ZDj",
-          "name": "小炎同学"
-        }
-      ],
-      "user": null,
-      "hash": "b3f634HzOLrfMF9SfoFs8MlOYFkQDxJTSwjFxffIEjq11SW33NRE"
-    },
-    {
-      "id": "kwrJ",
-      "name": "在你的身边",
-      "pic": null,
-      "url": null,
-      "time": 262,
-      "lyric": null,
-      "quality": [
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "Rw8W",
-        "name": "在你的身边",
-        "pic": "https://i.biliimg.com/bfs/im/6b7de788dec471da0308700ec5ef32ce8aca17e6.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "kLZK",
-          "name": "盛哲"
-        }
-      ],
-      "user": null,
-      "hash": "d3f636iePH3nJMVUD11XrQjHkf7o06LhlTtb4Cc7efUAPjXWWev0"
-    },
-    {
-      "id": "2AXMe",
-      "name": "未必",
-      "pic": null,
-      "url": null,
-      "time": 193,
-      "lyric": "https://d.musicapp.migu.cn/data/oss/resource/00/36/r3/41fa579154404e28bf708ef62425a092",
-      "quality": [
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "jnwnW",
-        "name": "未必",
-        "pic": "https://d.musicapp.migu.cn/data/oss/resource/00/2w/vt/00c681549b6742468c60838426bc297b.webp"
-      },
-      "artist": [
-        {
-          "id": "1lJW",
-          "name": "言瑾羽"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "m3f63OtUGNZoMDio1Kv5U7mQ-lp-bIKkteSv3jgQ7dWSL0aLZFeLha7Mv2h7Adp8"
-    },
-    {
-      "id": "8lwr",
-      "name": "其实都没有",
-      "pic": null,
-      "url": null,
-      "time": 241,
-      "lyric": null,
-      "quality": [
-        320,
-        {
-          "name": "128"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "N5a8",
-        "name": "关于",
-        "pic": "https://i.biliimg.com/bfs/im/e3f12361957aef511723457f17b17098cd203919.png@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "kLGr",
-          "name": "杨和苏KeyNG"
-        },
-        {
-          "id": "zlrQ",
-          "name": "杨宗纬"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "d3f636iePH3nJMVUD1wLmTjPhKLs1u-hoQoOgWsPbc0QDg3yed_ak"
-    },
-    {
-      "id": "3AqqO",
-      "name": "如果我们在余生相遇·双鱼座",
-      "pic": null,
-      "url": null,
-      "time": 273,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "n3YQO",
-        "name": "如果我们在余生相遇·十二星座篇",
-        "pic": "https://img3.kuwo.cn/star/albumcover/{size}/s3s88/41/66814386.jpg"
-      },
-      "artist": [
-        {
-          "id": "oXv6",
-          "name": "RE-D"
-        },
-        {
-          "id": "3gwe",
-          "name": "是二哈ya"
-        }
-      ],
-      "user": null,
-      "hash": "b3f634HzOLrfMF9SfoAs_Y1ycEEZVx5mFwjR_LfcEiK11SWH2ORc"
-    },
-    {
-      "id": "3Aqnq",
-      "name": "异客(Live)",
-      "pic": null,
-      "url": null,
-      "time": 227,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "lMw2Y",
-        "name": "天赐的声音第五季 第7期",
-        "pic": "https://img2.kuwo.cn/star/albumcover/{size}/s3s47/3/3548006739.png"
-      },
-      "artist": [
-        {
-          "id": "3ELn",
-          "name": "杨坤"
-        },
-        {
-          "id": "kn09",
-          "name": "王赫野"
-        },
-        {
-          "id": "ZMxq",
-          "name": "王睿卓"
-        }
-      ],
-      "user": {
-        "uid": 14064,
-        "username": "majie2333"
-      },
-      "hash": "b3f634HzOLrfMF9SfoFY_YQHNEEhZzZ6By2crKKIEg6d1S2DwPRE"
-    },
-    {
-      "id": "JGL3P",
-      "name": "不如见一面",
-      "pic": null,
-      "url": null,
-      "time": 220,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "GOnl8",
-        "name": "不如见一面",
-        "pic": "https://img4.kuwo.cn/star/albumcover/{size}/s3s97/21/3099600321.jpg"
-      },
-      "artist": [
-        {
-          "id": "zjBy",
-          "name": "海来阿木"
-        },
-        {
-          "id": "VpZE",
-          "name": "单依纯"
-        }
-      ],
-      "user": null,
-      "hash": "b3f634HzOLrfMF9SfoApoZgTOQERQzZ_Yn2IteacEj6R0RmvzNBw"
-    },
-    {
-      "id": "qjPV",
-      "name": "最后一页",
-      "pic": null,
-      "url": null,
-      "time": 245,
-      "lyric": null,
-      "quality": [
-        320,
-        {
-          "name": "128"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "MpJ2",
-        "name": "恋习",
-        "pic": "https://i.biliimg.com/bfs/im/5a910a2e23f2c8019f8fe5387c0a0e65db67206e.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "nO8K",
-          "name": "江语晨"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "d3f636iePH3nJMVUD1wO4TzDjfOQ2ur8yRYSjDsPYfkICiXo"
-    },
-    {
-      "id": "9plX",
-      "name": "春庭雪",
-      "pic": null,
-      "url": null,
-      "time": 240,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "Qa48",
-        "name": "春庭雪",
-        "pic": "https://i.biliimg.com/bfs/im/001e0ee58fa80960fe14c5dfba576512c753fa77.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "z7lX",
-          "name": "邓寓君(等什么君)"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoF4_ZlTIEkkBl5nRmDR5fqIGj6F_Tm33Pxw"
-    },
-    {
-      "id": "jJVX3",
-      "name": "重生之我在异乡为异客",
-      "pic": null,
-      "url": null,
-      "time": 197,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "27EvB",
-        "name": "重生之我在异乡为异客",
-        "pic": "https://img1.kuwo.cn/star/albumcover/{size}/s3s1/96/1042762193.jpg"
-      },
-      "artist": [
-        {
-          "id": "XJVg",
-          "name": "Damn5z"
-        },
-        {
-          "id": "ZMxq",
-          "name": "王睿卓"
-        }
-      ],
-      "user": null,
-      "hash": "b3f634HzOLrfMF9SfoF04YFWZQ0gCwsrYy2l7fqIEjaV-S2j1ORE"
-    },
-    {
-      "id": "vYVXo",
-      "name": "我好像在哪见过你(DJ版)",
-      "pic": null,
-      "url": null,
-      "time": 216,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "9Jna7",
-        "name": "我多想拥抱你",
-        "pic": "https://img3.kuwo.cn/star/albumcover/{size}/0/1/510051265.jpg"
-      },
-      "artist": [
-        {
-          "id": "aBKy",
-          "name": "苏亦洋"
-        }
-      ],
-      "user": null,
-      "hash": "b3f634HzOLrfMF9SfoFxtYAaeF0FWk8qBnTZ_fqIFiKx1SGzwNBY"
-    },
-    {
-      "id": "e3LXW",
-      "name": "暮色回响",
-      "pic": null,
-      "url": null,
-      "time": 178,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "5KnVq",
-        "name": "神啊可不可以让我感受一下",
-        "pic": "https://img2.kuwo.cn/star/albumcover/{size}/s3s2/79/3268836128.jpg"
-      },
-      "artist": [
-        {
-          "id": "nEO2",
-          "name": "吉星出租"
-        }
-      ],
-      "user": null,
-      "hash": "b3f634HzOLrfMF9SfoAtoZgDNRBEDzZ2FyGYve_AEjKFwTG_yNRM"
-    },
-    {
-      "id": "w4MB",
-      "name": "身骑白马",
-      "pic": null,
-      "url": null,
-      "time": 313,
-      "lyric": null,
-      "quality": [
-        96,
-        320,
-        {
-          "name": "128"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "ABaP",
-        "name": "LaLa首张创作专辑",
-        "pic": "https://i.biliimg.com/bfs/im/38346abb17850cd30633f8268db5b21f4c400122.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "kaPM",
-          "name": "徐佳莹"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoFdsYFTIQxRUx53XwmEqeaMCi6B-S20"
-    },
-    {
-      "id": "QaLgO",
-      "name": "我的纸飞机",
-      "pic": null,
-      "url": null,
-      "time": 196,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "ABnge",
-        "name": "我的纸飞机",
-        "pic": "https://img3.kuwo.cn/star/albumcover/{size}/s3s59/62/3392201856.jpg"
-      },
-      "artist": [
-        {
-          "id": "rQvo",
-          "name": "GooGoo"
-        },
-        {
-          "id": "nE32",
-          "name": "王之睿"
-        }
-      ],
-      "user": null,
-      "hash": "b3f634HzOLrfMF9SfoF8wMwHJEBMBlpqBy2Z4e_cFgqNwSmHzPBQ"
-    },
-    {
-      "id": "BYgr",
-      "name": "难却",
-      "pic": null,
-      "url": null,
-      "time": 186,
-      "lyric": null,
-      "quality": [
-        {
-          "name": "96"
-        },
-        {
-          "name": "128"
-        },
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "KlX5",
-        "name": "难却",
-        "pic": "https://i.biliimg.com/bfs/im/baf4bd09b63b26e6a7b28c2b0a85a341c9d182bb.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "e32q",
-          "name": "平生不晚"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoF1tZlSSQEEFl56EyWN9cfUFiKV_SWD6PRQ"
-    },
-    {
-      "id": "VxJ0",
-      "name": "缺氧",
-      "pic": null,
-      "url": null,
-      "time": 271,
-      "lyric": null,
-      "quality": [
-        96,
-        320,
-        {
-          "name": "128"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "P5W6",
-        "name": "缺氧",
-        "pic": "https://i.biliimg.com/bfs/im/b78bc7ce6c035c22a8224e056b163160b739796b.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "AO8K",
-          "name": "安苏羽"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoAlsNFfJGBYExJzRzGF8ffQEjqJ3TGj0PA"
-    },
-    {
-      "id": "VPL2Z",
-      "name": "西楼儿女(Live)",
-      "pic": null,
-      "url": null,
-      "time": 259,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "El93l",
-        "name": "西楼儿女",
-        "pic": "https://i.biliimg.com/bfs/article/4c86ddebf748e49c9e208eafea220fdd10830290.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "zjBy",
-          "name": "海来阿木"
-        }
-      ],
-      "user": null,
-      "hash": "b3f634HzOLrfMF9SfoFo-Y1zPQ0BVwZ2CwmB4Kv8Fg61xTW30OBE"
-    },
-    {
-      "id": "ynErW",
-      "name": "离别开出花",
-      "pic": null,
-      "url": null,
-      "time": 230,
-      "lyric": null,
-      "quality": [
-        128,
-        320
-      ],
-      "album": {
-        "id": "OJ62J",
-        "name": "离别开出花",
-        "pic": "https://i.biliimg.com/bfs/article/f84e60b60c24a3ce05fc6e8dc606087110830290.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "R7QW",
-          "name": "就是南方凯（项学凯）"
-        }
-      ],
-      "user": null,
-      "hash": "d3f636iePH3nJMVUD1w7uSjPofLNg7utpFtagCsPYekMKg3uWe_Oj"
-    },
-    {
-      "id": "RVrO",
-      "name": "安和桥",
-      "pic": null,
-      "url": null,
-      "time": 250,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "NyAe",
-        "name": "安和桥北",
-        "pic": "https://i.biliimg.com/bfs/im/fc889bd349fbba11517e16526283fafc52122af8.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "Rlvz",
-          "name": "宋冬野"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoAxsYQTPF0NUzMmDyDYrePQEj6B1SGv1"
-    },
-    {
-      "id": "3YM6",
-      "name": "可能",
-      "pic": null,
-      "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzIxMzExNDQwMl8xMDAwMTI0NjA=",
-      "time": 217,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "wxg8",
-        "name": "可能",
-        "pic": "https://i.biliimg.com/bfs/im/935192750604a4e60fd79d96a26ec8200f7bc239.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "zP01",
-          "name": "程响"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoFprYFzNE0JQkZSGymIoeqUFiaR-TWv0OBM"
-    },
-    {
-      "id": "V0wg",
-      "name": "Everywhere We Go",
-      "pic": null,
-      "url": null,
-      "time": 261,
-      "lyric": null,
-      "quality": [
-        128,
-        320
-      ],
-      "album": {
-        "id": "QGeQ",
-        "name": "三角度",
-        "pic": "https://i.biliimg.com/bfs/im/f2be1c44257b606afcadcadd4bd69f470dc54241.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "jJ5Q",
-          "name": "陈冠希"
-        },
-        {
-          "id": "9K8W",
-          "name": "MC仁"
-        },
-        {
-          "id": "7j5j",
-          "name": "厨房仔"
-        },
-        {
-          "id": "eQOW",
-          "name": "应采儿"
-        }
-      ],
-      "user": null,
-      "hash": "d3f636iePH3nJMVUD1wPpTTboK-E07e1hRoSiBsvcf0IIgw"
-    },
-    {
-      "id": "kQvL",
-      "name": "奢香夫人",
-      "pic": null,
-      "url": null,
-      "time": 259,
-      "lyric": null,
-      "quality": [
-        {
-          "name": "96"
-        },
-        {
-          "name": "128"
-        },
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "zj3P",
-        "name": "最炫民族风",
-        "pic": "https://i.biliimg.com/bfs/im/39b44bedd82b4c29554ff72def48f54f07921183.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "zBlj",
-          "name": "凤凰传奇"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoAkxM13NQEcCwMqGn2JxLfMCi6RwS28"
-    },
-    {
-      "id": "A7WV",
-      "name": "一路生花(DJ沈念版)",
-      "pic": null,
-      "url": null,
-      "time": 224,
-      "lyric": null,
-      "quality": [
-        {
-          "name": "96"
-        },
-        {
-          "name": "128"
-        },
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "kV5l",
-        "name": "一路生花",
-        "pic": "https://i.biliimg.com/bfs/im/6f923e3038473b1dc4050b6b02da1ba5ddb28227.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "NYjY",
-          "name": "温奕心"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoFdoYlLORxVTls3XwmZwK_MGgq1wS236PxU"
-    },
-    {
-      "id": "BYPj",
-      "name": "太想念",
-      "pic": null,
-      "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzI3NjYzODY0Nl8yMjQ3NDg1NDUx",
-      "time": 230,
-      "lyric": null,
-      "quality": [
-        {
-          "name": "96"
-        },
-        {
-          "name": "128"
-        },
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "Y4Ex",
-        "name": "太想念",
-        "pic": "https://i.biliimg.com/bfs/im/0bf028076bd2c82cb52326b850fd22e59168eecc.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "kqxB",
-          "name": "豆包"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoFw-ZwCTQ0VSkJnQwmJ4LP4FiqNwSW7wNR0"
-    },
-    {
-      "id": "MO39",
-      "name": "LoveU2",
-      "pic": null,
-      "url": null,
-      "time": 220,
-      "lyric": null,
-      "quality": [
-        320,
-        {
-          "name": "128"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "YQMp",
-        "name": "最爱的大师兄",
-        "pic": "https://i.biliimg.com/bfs/im/48b3b1bf66ae4374bd9ff55e9dd30bf967422921.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "zqP0",
-          "name": "陈伟霆"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "d3f636iePH3nJMVUD1wLtSzvpLOQ76uxkFNWgDZrZeEIIjXiYew"
-    },
-    {
-      "id": "NA2g",
-      "name": "Take Me Hand",
-      "pic": null,
-      "url": null,
-      "time": 259,
-      "lyric": null,
-      "quality": [
-        {
-          "name": "96"
-        },
-        {
-          "name": "128"
-        },
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "k664",
-        "name": "WONDER Tourism",
-        "pic": "https://i.biliimg.com/bfs/im/3297cce8b507e4fc65731a0d25739da4518c3921.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "RBjX",
-          "name": "DAISHI DANCE"
-        },
-        {
-          "id": "NZ9a",
-          "name": "Cécile Corbel"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoAs_Y1fPFBNXk5_WyGN-e_ECiK11R2vyOQ"
-    },
-    {
-      "id": "qQOq",
-      "name": "左肩",
-      "pic": null,
-      "url": null,
-      "time": 203,
-      "lyric": null,
-      "quality": [
-        96,
-        320,
-        {
-          "name": "128"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "oMZp",
-        "name": "左肩",
-        "pic": "https://i.biliimg.com/bfs/im/dcb5e5549de2a348dc56b7e5919f48e2147e4b63.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "AO8K",
-          "name": "安苏羽"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoA0_YVfPFBRVwZ-Bymkoe_YAi6ZzR2z2"
-    },
-    {
-      "id": "kyOe",
-      "name": "不得不爱",
-      "pic": null,
-      "url": null,
-      "time": 279,
-      "lyric": null,
-      "quality": [
-        {
-          "name": "128"
-        },
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "k8E0",
-        "name": "高手",
-        "pic": "https://i.biliimg.com/bfs/im/b84985ac842050c6ad3571d3ab7b055b5bc033fc.png@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "NAQZ",
-          "name": "潘玮柏"
-        },
-        {
-          "id": "zQG6",
-          "name": "弦子"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "d3f636iePH3nJMVUD11a4QzO1K7I27-1iE4akDcrbeUwMjHg"
-    },
-    {
-      "id": "kVDa",
-      "name": "风吹一夏",
-      "pic": null,
-      "url": null,
-      "time": 198,
-      "lyric": null,
-      "quality": [
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "N8EZ",
-        "name": "风吹一夏",
-        "pic": "https://i.biliimg.com/bfs/im/d3045dfaee8a62a81e563710a9054e2e6fc84fa2.png@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "zJgJ",
-          "name": "DP龙猪"
-        },
-        {
-          "id": "zexO",
-          "name": "Swei水"
-        },
-        {
-          "id": "kM16",
-          "name": "Rays陈袁"
-        }
-      ],
-      "user": null,
-      "hash": "d3f636iePH3nJMVUD1wK_QmSyLeAwubozFtf2Xc3bckAKiHmWdvah"
-    },
-    {
-      "id": "KPjoP",
-      "name": "小美满",
-      "pic": null,
-      "url": null,
-      "time": 214,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "y4wWg",
-        "name": "小美满",
-        "pic": "https://img1.kuwo.cn/star/albumcover/{size}/s3s40/13/2405080697.jpg"
-      },
-      "artist": [
-        {
-          "id": "zXQk",
-          "name": "周深"
-        }
-      ],
-      "user": null,
-      "hash": "b3f634HzOLrfMF9SfoA5qY12cE0lWxM_WnWR8fqIEiKx_TWrwORA"
-    },
-    {
-      "id": "LAwK",
-      "name": "就让这大雨全都落下",
-      "pic": null,
-      "url": null,
-      "time": 254,
-      "lyric": null,
-      "quality": [
-        96,
-        320,
-        {
-          "name": "128"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "Y8eZ",
-        "name": "联名",
-        "pic": "https://i.biliimg.com/bfs/im/19134d1e4abf9e6d12e683202723fef93efdb36a.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "RqA3",
-          "name": "容祖儿"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoA0_NVSZRBJZxsqDwmR9K_cFia1yRmj3Ohc"
-    },
-    {
-      "id": "KPqPW",
-      "name": "年少的你啊",
-      "pic": null,
-      "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzIxMzExNDQwMl8xMDAwMTA3OTg=",
-      "time": 180,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "K0A8V",
-        "name": "年少的你啊",
-        "pic": "https://i.biliimg.com/bfs/article/6682303b8693d3e63da0d55c036d072a10830290.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "Bx8L",
-          "name": "浩然H.R"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoFprZgOeQEMBzM-Fw2lxfvYFjKV-SGH7OBI"
-    },
-    {
-      "id": "XxXK6",
-      "name": "瞬",
-      "pic": null,
-      "url": null,
-      "time": 284,
-      "lyric": null,
-      "quality": [
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "rvaMA",
-        "name": "瞬",
-        "pic": "https://i.biliimg.com/bfs/article/5086fc7cdf8af20aec3d24745e68176810830290.png@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "BKwa",
-          "name": "郑润泽"
-        }
-      ],
-      "user": null,
-      "hash": "d3f636iePH3nJMVUD1wLmHjLgeLBm7rpoEdX1WcvYekMIgnqad_Cj"
-    },
-    {
-      "id": "27yZ",
-      "name": "我曾遇到一束光",
-      "pic": null,
-      "url": null,
-      "time": 259,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        {
-          "name": "320"
-        },
-        {
-          "name": "2000"
-        }
-      ],
-      "album": {
-        "id": "eQyn",
-        "name": "我曾遇到一束光",
-        "pic": "https://i.biliimg.com/bfs/im/90c58197e76a8d708be729858827437828b6b8c1.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "VpPg",
-          "name": "叶斯淳"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoA44MledF0dRls7Qz2UqfaMFj6FyR2_2Ohw"
-    },
-    {
-      "id": "qg74",
-      "name": "指纹",
-      "pic": null,
-      "url": null,
-      "time": 240,
-      "lyric": null,
-      "quality": [
-        {
-          "name": "128"
-        },
-        {
-          "name": "320"
-        }
-      ],
-      "album": {
-        "id": "r57n",
-        "name": "指纹",
-        "pic": "https://i.biliimg.com/bfs/im/11d905e708b1633edf09b3f22a5b667ae871ea6d.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "BZjE",
-          "name": "杜宣达"
-        }
-      ],
-      "user": null,
-      "hash": "d3f636iePH3nJMVUD1wHvQmPnf-c6vOwxQdakXc7bck0Mi3-XevOk"
-    },
-    {
-      "id": "Ngxz",
-      "name": "凤凰花开的路口",
-      "pic": null,
-      "url": null,
-      "time": 241,
-      "lyric": null,
-      "quality": [
-        128,
-        {
-          "name": "320"
-        }
-      ],
-      "album": {
-        "id": "zqxN",
-        "name": "熟情歌",
-        "pic": "https://i.biliimg.com/bfs/im/1de62dd8bebb624ae0542b1bd41860c0e4377747.jpg@{size}w_{size}h_1c.webp"
-      },
-      "artist": [
-        {
-          "id": "Ngxz",
-          "name": "林志炫"
-        }
-      ],
-      "user": {
-        "uid": 9785,
-        "username": "MFM编辑"
-      },
-      "hash": "b3f634HzOLrfMF9SfoA4xZQSSF0BTxZ6GymR6K_QEgq1yR2z7"
-    },
-    {
-      "id": "XxLPa",
-      "name": "Fast Cars & Superstars",
-      "pic": null,
-      "url": null,
-      "time": 172,
-      "lyric": null,
-      "quality": [
-        96,
-        128,
-        320,
-        2000
-      ],
-      "album": {
-        "id": "lMwyY",
-        "name": "Fast Cars & Superstars",
-        "pic": "https://img3.kuwo.cn/star/albumcover/{size}/s3s76/90/4290985577.jpg"
-      },
-      "artist": [
-        {
-          "id": "WgP2",
-          "name": "Cristian Marchi"
-        },
-        {
-          "id": "x25W",
-          "name": "Reverend Haus"
-        }
-      ],
-      "user": null,
-      "hash": "b3f634HzOLrfMF9SfoFs7YlLNGUBZzMjVw2N4KqQEiaV-TGH6PBI"
-    }
-  ]
+  "list": songData
+}
+
+// 歌手详情
+export const artistDetailsData = {
+  "pic": "https:\/\/y.qq.com\/music\/photo_new\/T001R300x300M0000016vX6t2FrLxi.jpg",
+  "name": "沈以诚",
+  "views": 1,
+  "update_time": "2024-11-08 15:26:18",
+  "list": songData.slice(Math.floor(Math.random()*songData.length), (songData.length - 1)),
+  "desc": "沈以诚，中国内地流行乐创作型男歌手。2016年3月，沈以诚在网易云音乐申请成为了网易音乐人，从此开始了隐居云村的音乐创作；3月17日，推出个人首支单曲《爱冬野的少年》。2017年，推出个人单曲《椿》 。2019年3月29日，推出个人首张原创EP《初遇》；9月16日，推出个人第二张EP《须后水》。2020年，为古装玄幻剧集《无心法师3》演唱的推广曲《无心》正式上线；同年，推出个人原创专辑《玩家》。2021年，为电视剧《假日暖洋洋》演唱的插曲《简单》正式上线。"
 }

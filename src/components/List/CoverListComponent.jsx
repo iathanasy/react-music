@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './coverlist.module.scss'
 
-import { Image } from 'antd';
+import { Image,Avatar } from 'antd';
 import { useNavigate } from 'react-router-dom';
 /**
  * @param type ([playlist：歌单,album: 专辑])
@@ -25,8 +25,8 @@ const CoverListComponent = ({data, type = 'playlist'}) => {
         <div key={index} title={item.name} className={styles.cover_col} onClick={()=>detail(item)}>
             {/* <img src={item.pic} /> */}
             <div className={styles.cover_img}>
-              <Image
-                preview={false}
+              <Avatar
+                style={{width:'100%',height:'100%'}} shape="square"
                 src={item.pic}
               />
             </div>

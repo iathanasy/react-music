@@ -162,7 +162,27 @@ const PlayerContextProvider = (props) =>{
         setPlaylist([])
     }
 
-    
+    /**
+     * 播放全部
+     * @param {*} list 
+     */
+    const playlistAll =(list)=>{
+        setPlaylist(list)
+        setIsPlaying(true)
+    }
+    /**
+     * 加入列表
+     * @param {*} list 
+     */
+    const jonPlaylist =(list)=>{
+        setPlaylist((playlist) => {
+            // Create a new array with the current items and the new item
+            const newItems = [...playlist, ...list];
+            // Remove duplicates using Set and convert back to array
+            const uniqueItems = Array.from(new Set(newItems));
+            return uniqueItems;
+          });
+    }
 
     // 格式化音量提示
     const tooltipVolume =(value)=> Math.ceil(value * 100);
@@ -203,7 +223,8 @@ const PlayerContextProvider = (props) =>{
      */
     const contextValue = {
         audioRef,
-        playlist,
+        playlist, playlistAll,
+        jonPlaylist,
         isPlaying, setIsPlaying,
         isMuted, setIsMuted,
         currentTrackIndex,setCurrentTrackIndex,

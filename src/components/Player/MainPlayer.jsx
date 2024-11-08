@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useContext } from "react";
-import {Slider,Affix,Button,Divider, Space, Typography,Tooltip,Drawer,List,Avatar,theme } from "antd";
+import {Slider,Affix,Button,Divider, Space, Typography,Tooltip,Drawer,List,Avatar,theme,Tag } from "antd";
 import { PlayCircleOutlined,PauseCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined,MenuUnfoldOutlined,SoundOutlined,MutedOutlined,CaretRightOutlined,PauseOutlined,CloseCircleOutlined,MenuFoldOutlined } from '@ant-design/icons';
 import './MainPlayer.scss'
 import coverImg from '@/assets/placeholder.svg'
@@ -16,6 +16,7 @@ import {
 } from "react-ionicons";
 import { PlayerContext } from "@/context/PlayerContext";
 import FullPlayer from "./FullPlayer";
+import { NavLink } from "react-router-dom";
 
 // yarn add styled-components
 // https://www.npmjs.com/package/styled-components
@@ -64,16 +65,22 @@ export default function MainPlayer(){
             <div className="main-player">
             <audio 
                 ref={audioRef} 
-                src={playlist[currentTrackIndex]?.source}
+                src={playlist[currentTrackIndex]?.url}
                 onVolumeChange={()=>{setVolume(audioRef.current.volume)}} />
             {/* 播放信息 */}
             <div className="play-data">
                 <div className="cover">
-                    <Avatar shape="square" size={60} src={playlist[currentTrackIndex]?.cover} className="cover-img" onClick={toggleFullPlayer}/>
+                    <Avatar shape="square" size={60} src={playlist[currentTrackIndex]?.pic} className="cover-img" onClick={toggleFullPlayer}/>
                 </div>
                 <div className="info text-truncate">
                     <h3 className="name" title={playlist[currentTrackIndex]?.name}>{playlist[currentTrackIndex]?.name}</h3>
-                    <span className="artists" title={playlist[currentTrackIndex]?.artist}>{playlist[currentTrackIndex]?.artist}</span>
+                    {playlist[currentTrackIndex]?.artist.map((item, index) => {
+                        return (
+                        <NavLink key={item.id} to={`/artist?id=${item.id}`}>
+                            <Tag color="magenta" title={item.name}>{item.name}</Tag>
+                        </NavLink>
+                        );
+                    })}
                 </div>
             </div>
             {/* 控制 */}
@@ -195,10 +202,17 @@ const MianPlayDrawer = ()=>{
                         <List.Item className={currentTrackIndex === index ?'play-list play-list-active':'play-list'}>
                             <List.Item.Meta
                                 style={{width:'130px'}}
-                                avatar={<Avatar shape="square" size={40} src={item.cover} />}
+                                avatar={<Avatar shape="square" size={40} src={item.pic} />}
                                 title={<div className="play-list-name text-truncate" title={item.name}>{item.name}</div>}
-                                description={<a href="#" className="play-list-artist text-truncate" title={item.artist}>{item.artist}</a>}
-                
+                                description={
+                                    item.artist.map((m) => {
+                                        return (
+                                        <NavLink key={m.id} to={`/artist?id=${m.id}`}>
+                                            <span className="play-list-artist text-truncate" color="magenta" title={m.name}>{m.name}</span>
+                                        </NavLink>
+                                        );
+                                    })
+                                }
                             />
                             <span>
                                 {(isPlaying && currentTrackIndex === index) ?

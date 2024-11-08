@@ -32,7 +32,7 @@ export default function Home() {
         <div className="container">
           <div className={styles.even_columns}>
               {recData.map((item,index) =>
-                <div className={styles.card}>
+                <div key={index} className={styles.card}>
                   <h3><NavLink to={item.path}>{item.name} <RightOutlined /></NavLink></h3>
                   <div className={styles.card_col}>
                   {item.type === 'artist' ? <ArtistListComponent data={item.list}/> : <CoverListComponent data={item.list} type={item.type}/>}

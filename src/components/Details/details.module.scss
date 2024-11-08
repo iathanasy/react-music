@@ -1,0 +1,30 @@
+.container{
+    width: 100%;
+}
+.row_header{
+    display: flex;
+    margin-bottom: 20px;
+    .row_header_img{
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+    .row_header_col{
+        padding: 0 10px;
+        width: 60%;
+        p{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin: 8px 0;
+            padding-top: 8px;
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+    .row_header_btn{
+        margin-top: 20px;
+        button{
+            margin-right: 10px;
+        }
+    }
+}
