@@ -48,7 +48,7 @@ const PlayerContextProvider = (props) =>{
                 audioRef.current.addEventListener('ended', playNextTrack)
             }
         }
-    },[])
+    },[isPlaying, currentTrackIndex])
 
     useEffect(()=>{
         if(audioRef.current){
@@ -73,16 +73,16 @@ const PlayerContextProvider = (props) =>{
      * 下一首
      */
     const playNextTrack = ()=>{
-        setCurrentTrackIndex((prevIndex) =>{
+        setCurrentTrackIndex(() =>{
             if(isShuffled){
                 // 随机播放
                 let newIndex
                 do{
                     newIndex = Math.floor(Math.random() * playlist.length)
-                }while(newIndex === prevIndex)
+                }while(newIndex === currentTrackIndex)
                 return newIndex
             }else{
-                return (prevIndex + 1) % playlist.length
+                return (currentTrackIndex + 1) % playlist.length
             }
         })
         setIsPlaying(true)
