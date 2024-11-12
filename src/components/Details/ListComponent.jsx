@@ -1,6 +1,6 @@
 import React,{useContext} from 'react'
 import { useLocation,useSearchParams,useMatch, NavLink } from 'react-router-dom'
-import {playlistData, artistData, playlistDetailsData, artistDetailsData} from '@/data/data'
+import {playlistData, artistData, playlistDetailsData, artistDetailsData, albumDetailsData} from '@/data/data'
 import { Space, Table,Avatar,Button,Tag   } from 'antd';
 import styles from './details.module.scss'
 
@@ -43,7 +43,13 @@ const ListComponent = () => {
         </HeaderDetail>
       )
     default:
-      return '专辑'
+      // 专辑
+      return (
+        <HeaderDetail list={albumDetailsData.list} name={albumDetailsData.name} pic={albumDetailsData.pic} desc={albumDetailsData.desc}>
+          <h2>包含歌曲列表</h2>
+          <SongList data={albumDetailsData.list}/>
+        </HeaderDetail>
+      )
   }
 }
 
@@ -58,9 +64,9 @@ export const HeaderDetail = (props)=>{
             <Avatar style={{width:'12.5rem',height:'12.5rem'}} shape="square" src={pic}/>
           </div>
           <div className={styles.row_header_col}>
-            <h2>{name}</h2>
-            {desc && <p>{desc}</p>}
-            {ctime && <p>创建于 · {ctime}</p>}
+            <h2 title={name}>{name}</h2>
+            {desc && <p title={desc}>{desc}</p>}
+            {ctime && <p title={`创建于 · ${ctime}`}>创建于 · {ctime}</p>}
             <div className={styles.row_header_btn}>
               <Button type="primary" onClick={()=>playlistAll(list)} icon={<CaretRightOutlined />}>播放全部 {list?.length}</Button>
               <Button type="primary" onClick={()=>jonPlaylist(list)}icon={<PlusOutlined />}>加入播放列表</Button>

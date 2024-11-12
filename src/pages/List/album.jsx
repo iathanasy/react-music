@@ -1,9 +1,8 @@
+import ListComponent from '@/components/Details/ListComponent';
+import {useSearchParams } from 'react-router-dom'
+
 export default function AlbumList() {
-    return (
-      <>
-          <h1 className="row">
-                专辑列表
-          </h1>
-      </>
-    )
+  const [search,setSearch] = useSearchParams()
+  const id = search.get('id')
+  return (<ListComponent />)
   }

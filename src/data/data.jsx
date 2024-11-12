@@ -528,7 +528,7 @@ export const songData = [
       "lyric": null,
       "url": '/music/mp3/1.mp3',
       "name": "track 1",
-      "pic": '/music/mp3/1.jpg',
+      "pic": '/music/img/1.jpg',
       "time": 236,
       "album": {
         "id": "9JvBo",
@@ -547,7 +547,7 @@ export const songData = [
       "lyric": null,
       "url": '/music/mp3/2.mp3',
       "name": "track 2",
-      "pic": '/music/mp3/2.jpg',
+      "pic": '/music/img/2.jpg',
       "time": 192,
       "album": {
         "id": "9Jv1Q",
@@ -566,7 +566,7 @@ export const songData = [
       "lyric": null,
       "url": '/music/mp3/3.mp3',
       "name": "track 3",
-      "pic": '/music/mp3/3.jpg',
+      "pic": '/music/img/3.jpg',
       "time": 267,
       "album": {
         "id": "Vpw5e",
@@ -585,7 +585,7 @@ export const songData = [
       "lyric": null,
       "url": '/music/mp3/4.mp3',
       "name": "track 4",
-      "pic": '/music/mp3/4.jpg',
+      "pic": '/music/img/4.jpg',
       "time": 226,
       "album": {
         "id": "rvAXQ",
@@ -604,7 +604,7 @@ export const songData = [
       "lyric": null,
       "url": '/music/mp3/5.mp3',
       "name": "track 5",
-      "pic": '/music/mp3/5.jpg',
+      "pic": '/music/img/5.jpg',
       "time": 263,
       "album": {
         "id": "ABvVj",
@@ -623,7 +623,7 @@ export const songData = [
       "lyric": null,
       "url": '/music/mp3/6.mp3',
       "name": "track 6",
-      "pic": '/music/mp3/6.jpg',
+      "pic": '/music/img/6.jpg',
       "time": 166,
       "album": {
         "id": "Q0wo5",
@@ -642,7 +642,7 @@ export const songData = [
       "lyric": null,
       "url": '/music/mp3/7.mp3',
       "name": "track 7",
-      "pic": '/music/mp3/7.jpg',
+      "pic": '/music/img/7.jpg',
       "time": 264,
       "album": {
         "id": "Jlj3A",
@@ -661,7 +661,7 @@ export const songData = [
       "lyric": null,
       "url": '/music/mp3/8.mp3',
       "name": "track 8",
-      "pic": '/music/mp3/8.jpg',
+      "pic": '/music/img/8.jpg',
       "time": 297,
       "album": {
         "id": "xxGga",
@@ -680,7 +680,7 @@ export const songData = [
       "lyric": null,
       "url": '/music/mp3/9.mp3',
       "name": "track 9",
-      "pic": '/music/mp3/9.jpg',
+      "pic": '/music/img/9.jpg',
       "time": 209,
       "album": {
         "id": "JlwX8",
@@ -714,4 +714,12 @@ export const artistDetailsData = {
   "update_time": "2024-11-08 15:26:18",
   "list": songData.slice(Math.floor(Math.random()*songData.length), (songData.length - 1)),
   "desc": "沈以诚，中国内地流行乐创作型男歌手。2016年3月，沈以诚在网易云音乐申请成为了网易音乐人，从此开始了隐居云村的音乐创作；3月17日，推出个人首支单曲《爱冬野的少年》。2017年，推出个人单曲《椿》 。2019年3月29日，推出个人首张原创EP《初遇》；9月16日，推出个人第二张EP《须后水》。2020年，为古装玄幻剧集《无心法师3》演唱的推广曲《无心》正式上线；同年，推出个人原创专辑《玩家》。2021年，为电视剧《假日暖洋洋》演唱的插曲《简单》正式上线。"
+}
+
+//专辑详情
+export const albumDetailsData = {
+    "pic": "https:\/\/i.biliimg.com\/bfs\/im\/fb3166addb08b25e11609c830d0d0d5487a1d9db.png@150w_150h_1c.webp",
+    "name": "宝丽金劲爆跳舞街",
+    "list": songData,
+    "desc": null
 }

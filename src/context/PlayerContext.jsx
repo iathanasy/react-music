@@ -14,7 +14,7 @@ const PlayerContextProvider = (props) =>{
     const [currentTrackIndex, setCurrentTrackIndex] = useState(0)
     const [duration, setDuration] = useState(0)
     const [currentTime, setCurrentTime] = useState(0)
-    const [volume, setVolume] = useState(0.50)
+    const [volume, setVolume] = useState(0.80)
     const [isShuffled, setIsShuffled] = useState(false)
 
     const audioRef = useRef(null)
@@ -38,20 +38,19 @@ const PlayerContextProvider = (props) =>{
             audioRef.current.addEventListener('timeupdate', ()=>{
                 setCurrentTime(audioRef.current.currentTime)
             })
-            // 播放完成，进入下一首
-            audioRef.current.addEventListener('ended', playNextTrack)
         }
         return () =>{
             if(audioRef.current){
                 audioRef.current.addEventListener('loadedmetadata', ()=>{})
                 audioRef.current.addEventListener('timeupdate', ()=>{})
-                audioRef.current.addEventListener('ended', playNextTrack)
             }
         }
-    },[isPlaying, currentTrackIndex])
+    },[])
 
     useEffect(()=>{
         if(audioRef.current){
+            // 播放完成，进入下一首
+            audioRef.current.addEventListener('ended', playNextTrack)
             if(isPlaying){
                 // 播放
                 audioRef.current.play()
@@ -59,6 +58,10 @@ const PlayerContextProvider = (props) =>{
                 // 暂停
                 audioRef.current.pause()
             }
+        }
+        return () =>{
+            if(audioRef.current)
+                audioRef.current.addEventListener('ended', playNextTrack)
         }
     }, [isPlaying, currentTrackIndex])
 

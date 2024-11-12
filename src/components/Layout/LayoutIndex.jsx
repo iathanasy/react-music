@@ -35,11 +35,11 @@ const items=[
         key: '/playlist',
         icon: <VideoCameraOutlined />,
     },
-    {
-        label: '专辑',
-        key: '/album',
-        icon: <MutedOutlined />
-    }
+    // {
+    //     label: '专辑',
+    //     key: '/album',
+    //     icon: <MutedOutlined />
+    // }
 ]
 export function LayoutIndex({element}) {
     const [collapsed, setCollapsed] = useState(false);
