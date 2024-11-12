@@ -5,16 +5,29 @@
     width: 100%;
 }
 .cover_col{
-    &:hover{
-        cursor: pointer;
-        background-color: rgba($color: #000000, $alpha: 0.2);
-    }
+    position: relative;
     padding: 10px;
     .cover_img{
         width: 150px;
         height: 150px;
         img{
             border-radius: 10px;
+        }
+    }
+    .cover_ico{
+        position: absolute;
+        top: 20px;
+        height: 130px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        &:hover{
+            opacity: 1;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: rgba(60, 60, 60, 0.5);
+            color: white;
         }
     }
     span{

@@ -3,6 +3,10 @@ import styles from './coverlist.module.scss'
 
 import { Image,Avatar } from 'antd';
 import { useNavigate } from 'react-router-dom';
+
+import { 
+  CaretRightOutlined
+} from '@ant-design/icons';
 /**
  * @param type ([playlist：歌单,album: 专辑])
  * @returns 封面列表（歌单、专辑）
@@ -29,6 +33,9 @@ const CoverListComponent = ({data, type = 'playlist'}) => {
                 style={{width:'100%',height:'100%'}} shape="square"
                 src={item.pic}
               />
+              <div className={styles.cover_ico}>
+                <CaretRightOutlined style={{fontSize: '50px'}}/>
+              </div>
             </div>
 
             <span>{item.name}</span>
