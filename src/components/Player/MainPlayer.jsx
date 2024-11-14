@@ -92,9 +92,9 @@ export default function MainPlayer(){
                     </Tooltip>
                     <Tooltip title={isPlaying ? '暂停' : '播放'}>
                         {isPlaying ?
-                        <PauseOutlined onClick={togglePlayPause} className="play-icon" style={{fontSize:"30px"}}/>
+                        <PauseOutlined onClick={togglePlayPause} className="play-icon" style={{fontSize:"35px"}}/>
                         :
-                        <CaretRightOutlined onClick={togglePlayPause} className="play-icon" style={{fontSize:"30px"}}/>
+                        <CaretRightOutlined onClick={togglePlayPause} className="play-icon" style={{fontSize:"35px"}}/>
                     }
                     </Tooltip>
                     <Tooltip title="下一首">
@@ -104,6 +104,8 @@ export default function MainPlayer(){
                 <div className="player-slider">
                     <span className="player-time">{formatTime(currentTime)}</span>
                     <Slider
+                        railBg="red"
+                        railHoverBg={"rgba(0, 0, 0, 0.5)"}
                         onChange={handleTimeChange}
                         min={0}
                         max={duration}
@@ -207,9 +209,9 @@ const MianPlayDrawer = ()=>{
                                     <div className="play-list-avatar">
                                         <Avatar shape="square" size={40} src={item.pic}/>
                                         {(isPlaying && currentTrackIndex === index) ?
-                                        <PauseCircleOutlined className="play-icon play-list-icon" onClick={togglePlayPause}/> 
+                                        <PauseCircleOutlined className="drawer-play-icon play-list-icon" onClick={togglePlayPause}/> 
                                         : 
-                                        <PlayCircleOutlined className="play-icon play-list-icon" onClick={() => selectTrack(index)}/>
+                                        <PlayCircleOutlined className="drawer-play-icon play-list-icon" onClick={() => selectTrack(index)}/>
                                         }
                                     </div>
                                 }
@@ -226,12 +228,12 @@ const MianPlayDrawer = ()=>{
                             />
                             <span>
                                 {(isPlaying && currentTrackIndex === index) ?
-                                <PauseCircleOutlined className="play-icon" onClick={togglePlayPause}/> 
+                                <PauseCircleOutlined className="drawer-play-icon" onClick={togglePlayPause}/> 
                                 : 
-                                <PlayCircleOutlined className="play-icon" onClick={() => selectTrack(index)}/>
+                                <PlayCircleOutlined className="drawer-play-icon" onClick={() => selectTrack(index)}/>
                                 }
                                 &nbsp;
-                                <CloseCircleOutlined className="play-icon" onClick={() => clearTrack(index)}/>
+                                <CloseCircleOutlined className="drawer-play-icon" onClick={() => clearTrack(index)}/>
                             </span>
                         </List.Item>
                     )}
