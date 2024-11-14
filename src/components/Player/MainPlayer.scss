@@ -23,12 +23,21 @@ main-player-hide{
   gap: 10px;
   .cover{
     cursor: pointer;
-    // display: inline-block;
-    // width: 4rem;
-    // height: 4rem;
-    // .cover-img{
-    //   width: 100%;
-    // }
+    position: relative;
+    .cover-icon{
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0.9rem;
+      border-radius: 10px;
+      font-size: 30px;
+      &:hover{
+        opacity: 1;
+        color: #fff;
+        background-color: rgba(60, 60, 60, 0.5);
+      }
+    }
   }
   .info{
     width: 10rem;

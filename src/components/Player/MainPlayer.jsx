@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useContext } from "react";
 import {Slider,Affix,Button,Divider, Space, Typography,Tooltip,Drawer,List,Avatar,theme,Tag } from "antd";
-import { PlayCircleOutlined,PauseCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined,MenuUnfoldOutlined,SoundOutlined,MutedOutlined,CaretRightOutlined,PauseOutlined,CloseCircleOutlined,MenuFoldOutlined } from '@ant-design/icons';
+import { PlayCircleOutlined,PauseCircleOutlined, StepBackwardOutlined, StepForwardOutlined, RetweetOutlined, UnorderedListOutlined,MenuUnfoldOutlined,SoundOutlined,MutedOutlined,CaretRightOutlined,PauseOutlined,CloseCircleOutlined,MenuFoldOutlined,FullscreenOutlined,FullscreenExitOutlined } from '@ant-design/icons';
 import './MainPlayer.scss'
 import coverImg from '@/assets/placeholder.svg'
 
@@ -70,7 +70,8 @@ export default function MainPlayer(){
             {/* 播放信息 */}
             <div className="play-data">
                 <div className="cover">
-                    <Avatar shape="square" size={60} src={playlist[currentTrackIndex]?.pic} className="cover-img" onClick={toggleFullPlayer}/>
+                    <Avatar shape="square" size={60} src={playlist[currentTrackIndex]?.pic} className="cover-img" />
+                    {fullPlayer ? <FullscreenExitOutlined className="cover-icon" onClick={toggleFullPlayer}/> : <FullscreenOutlined className="cover-icon" onClick={toggleFullPlayer}/>}
                 </div>
                 <div className="info text-truncate">
                     <h3 className="name" title={playlist[currentTrackIndex]?.name}>{playlist[currentTrackIndex]?.name}</h3>
