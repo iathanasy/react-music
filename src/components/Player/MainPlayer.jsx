@@ -202,7 +202,16 @@ const MianPlayDrawer = ()=>{
                         <List.Item className={currentTrackIndex === index ?'play-list play-list-active':'play-list'}>
                             <List.Item.Meta
                                 style={{width:'130px'}}
-                                avatar={<Avatar shape="square" size={40} src={item.pic} />}
+                                avatar={
+                                    <div className="play-list-avatar">
+                                        <Avatar shape="square" size={40} src={item.pic}/>
+                                        {(isPlaying && currentTrackIndex === index) ?
+                                        <PauseCircleOutlined className="play-icon play-list-icon" onClick={togglePlayPause}/> 
+                                        : 
+                                        <PlayCircleOutlined className="play-icon play-list-icon" onClick={() => selectTrack(index)}/>
+                                        }
+                                    </div>
+                                }
                                 title={<div className="play-list-name text-truncate" title={item.name}>{item.name}</div>}
                                 description={
                                     item.artist.map((m) => {

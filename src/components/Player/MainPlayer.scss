@@ -95,6 +95,27 @@ main-player-hide{
   color: rgb( 78,89,105 );
 }
 .play-list{
+  &:hover{
+    border-radius: 10px;
+    background-color: rgb(229,230,235);
+  }
+  .play-list-avatar{
+    position: relative;
+    cursor: pointer;
+    .play-list-icon{
+      opacity: 0;
+      color: #fff !important;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0.6rem;
+      border-radius: 10px;
+      &:hover{
+        opacity: 1;
+        background-color: rgba(60, 60, 60, 0.5);
+      }
+    }
+  }
   .play-list-name{
     font-size: 12px;
   }
@@ -110,7 +131,7 @@ main-player-hide{
   }
 }
 .play-list-active{
-  background-color: #108ee9;
+  background-color: #108ee9 !important;
   border-radius: 10px;
   color: #fff !important;
   .play-list-name{
