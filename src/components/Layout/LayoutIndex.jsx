@@ -72,7 +72,7 @@ export function LayoutIndex({element}) {
             }}>
                 {/*侧边栏*/}
                 <Sider trigger={null} collapsible collapsed={collapsed} theme="light" style={{
-                    background: '#f1f5f9'
+                    background: '#f1f5f9',
                 }}>
                     <div className="demo-logo-vertical">
                         <img src={LogoVite} alt="Logo" />
@@ -94,6 +94,9 @@ export function LayoutIndex({element}) {
                 <Layout>
                     <Header
                         style={{
+                            position: 'fixed',
+                            zIndex: 9,
+                            width: '100%',
                             padding: 0,
                             borderBottom: '1px solid rgb(235, 237, 240)',
                             background: colorBgContainer,
@@ -132,15 +135,16 @@ export function LayoutIndex({element}) {
                     {/*路由页面*/}
                     <Content
                         style={{
-                            // margin: '24px 16px',
+                            marginTop: 64,
                             padding: 24,
-                            minHeight: 280,
                             background: colorBgContainer,
                             borderRadius: borderRadiusLG,
                         }}
                     >
                         {/* 指定路由组件呈现的位置 */}
-                        <div className='layout-content'>{element}</div>
+                        <div className='layout-content'>
+                            {element}
+                        </div>
                     </Content>
 
                 </Layout>

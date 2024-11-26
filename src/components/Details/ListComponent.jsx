@@ -132,7 +132,7 @@ export const SongList =(props)=>{
 
   return (
     <div>
-      <Table rowKey={record => record.id} columns={columns} dataSource={props.data} />;
+      <Table rowKey={record => record.id} columns={columns} dataSource={props.data} />
     </div>
   )
 }
