@@ -95,7 +95,7 @@ export function LayoutIndex({element}) {
                     <Header
                         style={{
                             position: 'fixed',
-                            zIndex: 9,
+                            zIndex: 5,
                             width: '100%',
                             padding: 0,
                             borderBottom: '1px solid rgb(235, 237, 240)',
