@@ -18,6 +18,7 @@ const { Header, Sider, Content,Footer } = Layout;
 import './LayoutIndex.scss'
 import LogoVite from '@/assets/vite.svg'
 import MainPlayer from "@/components/Player/MainPlayer";
+import {oauthLogin} from "@/apis/user";
 
 const items=[
     {
@@ -35,11 +36,11 @@ const items=[
         key: '/playlist',
         icon: <VideoCameraOutlined />,
     },
-    // {
-    //     label: '专辑',
-    //     key: '/album',
-    //     icon: <MutedOutlined />
-    // }
+    {
+        label: '授权码登录',
+        key: '/oauth',
+        icon: <MutedOutlined />
+    }
 ]
 export function LayoutIndex({element}) {
     const [collapsed, setCollapsed] = useState(false);
@@ -49,7 +50,18 @@ export function LayoutIndex({element}) {
 
     const navigate = useNavigate()
     const onMenuClick = ( value ) => {
-        navigate( value.key )
+        if(value.key === '/oauth'){
+            const params = {
+                client_id: 'client001',
+                response_type: 'code',
+                scope: 'all',
+                redirect_uri: 'https://www.baidu.com'
+            }
+             oauthLogin(params)
+        }else{
+            navigate( value.key )
+        }
+
     }
 
     function back(){
