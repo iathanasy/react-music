@@ -85,6 +85,10 @@ export function LayoutIndex({element}) {
                 {/*侧边栏*/}
                 <Sider trigger={null} collapsible collapsed={collapsed} theme="light" style={{
                     background: '#f1f5f9',
+                    height: '100vh',
+                    position: 'fixed',
+                    left: 0,
+                    overflow: 'auto',
                 }}>
                     <div className="demo-logo-vertical">
                         <img src={LogoVite} alt="Logo" />
@@ -95,20 +99,20 @@ export function LayoutIndex({element}) {
                         theme="light"
                         mode="inline"
                         defaultSelectedKeys={[selectedKey]}
-                        selectedKeys={ selectedKey }
+                        selectedKeys={selectedKey}
                         items={items}
-                        onClick={ onMenuClick }
+                        onClick={onMenuClick}
                         style={{
                             background: '#f1f5f9'
                         }}
                     />
                 </Sider>
-                <Layout>
+                <Layout className='layout-content' style={{ marginLeft: collapsed ? 80 : 200 }}>
                     <Header
                         style={{
                             position: 'fixed',
                             zIndex: 5,
-                            width: '100%',
+                            width: `calc(100% - ${collapsed ? 80 : 200}px)`,
                             padding: 0,
                             borderBottom: '1px solid rgb(235, 237, 240)',
                             background: colorBgContainer,
@@ -151,14 +155,15 @@ export function LayoutIndex({element}) {
                             padding: 24,
                             background: colorBgContainer,
                             borderRadius: borderRadiusLG,
+                            overflow: 'auto',
+                            height: 'calc(100vh - 64px)',
                         }}
                     >
                         {/* 指定路由组件呈现的位置 */}
-                        <div className='layout-content'>
+                        <div>
                             {element}
                         </div>
                     </Content>
-
                 </Layout>
             </Layout>
             {/*全局播放器*/}
