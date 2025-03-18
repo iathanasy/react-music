@@ -1,3 +1,58 @@
+.warp{
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*内容*/
+.warp-content{
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  /*   max-height: 100%; */
+  display: flex;
+}
+/*内容左边导航*/
+.content-left{
+  flex-shrink: 0;
+  overflow: auto;
+}
+/*右边内容*/
+.content-right{
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+/*内容头部*/
+.child-header{
+  flex-shrink: 0;
+}
+/*内容*/
+.child-content{
+  padding-top: 5px;
+  padding-left: 5px;
+  flex: 1;
+  overflow: auto;
+}
+// .col{
+//   width: 100%;
+//   height: 30vh;
+//   background: #ccc;
+//   margin: 20px 0;
+// }
+
+/*播放器*/
+.warp-footer{
+  width: 100%;
+  height: 6.25rem;
+  flex-shrink: 0;
+}
+
+
 .demo-logo-vertical {
   display: flex;
   justify-content: center;
@@ -16,10 +71,4 @@
     font-weight: 600;
     padding-left: 10px;
   }
-}
-.layout-content{
-  width: 100%;
-  height: 100vh;
-  overflow-y: auto;
-  margin-bottom: 6.25rem;
 }

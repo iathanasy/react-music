@@ -77,97 +77,92 @@ export function LayoutIndex({element}) {
     const selectedKey = location.pathname
 
     return (
-        <>
-            {/*主框架*/}
-            <Layout style={{
-                minHeight: '100vh',
-            }}>
-                {/*侧边栏*/}
-                <Sider trigger={null} collapsible collapsed={collapsed} theme="light" style={{
-                    background: '#f1f5f9',
-                    height: '100vh',
-                    position: 'fixed',
-                    left: 0,
-                    overflow: 'auto',
-                }}>
-                    <div className="demo-logo-vertical">
-                        <img src={LogoVite} alt="Logo" />
-                        <span>Music</span>
-                    </div>
-                    {/*导航栏*/}
-                    <Menu
-                        theme="light"
-                        mode="inline"
-                        defaultSelectedKeys={[selectedKey]}
-                        selectedKeys={selectedKey}
-                        items={items}
-                        onClick={onMenuClick}
-                        style={{
-                            background: '#f1f5f9'
-                        }}
-                    />
-                </Sider>
-                <Layout className='layout-content' style={{ marginLeft: collapsed ? 80 : 200 }}>
-                    <Header
-                        style={{
-                            position: 'fixed',
-                            zIndex: 5,
-                            width: `calc(100% - ${collapsed ? 80 : 200}px)`,
-                            padding: 0,
-                            borderBottom: '1px solid rgb(235, 237, 240)',
-                            background: colorBgContainer,
-                        }}
-                    >
-                        <Button
-                            type="text"
-                            icon={collapsed ? <MenuUnfoldOutlined style={{fontSize: '23px'}}/> : <MenuFoldOutlined style={{fontSize: '23px'}}/>}
-                            onClick={() => setCollapsed(!collapsed)}
-                            style={{
-                                width: 64,
-                                height: 64,
-                            }}
-                        />
-
-                        <Button
-                            type="text"
-                            icon={<LeftCircleOutlined style={{fontSize: '23px'}}/>}
-                            onClick={back}
-                            style={{
-                                width: 64,
-                                height: 64,
-                            }}
-                        />
-                        
-                        <Button
-                            type="text"
-                            icon={<RightCircleOutlined style={{fontSize: '23px'}}/>}
-                            onClick={forward}
-                            style={{
-                                width: 64,
-                                height: 64,
-                            }}
-                        />
-                    </Header>
-                    {/*路由页面*/}
-                    <Content
-                        style={{
-                            marginTop: 64,
-                            padding: 24,
-                            background: colorBgContainer,
-                            borderRadius: borderRadiusLG,
-                            overflow: 'auto',
-                            height: 'calc(100vh - 64px)',
-                        }}
-                    >
-                        {/* 指定路由组件呈现的位置 */}
-                        <div>
-                            {element}
+        <div className='warp'>
+            <div className="warp-content">
+                <div className='content-left'>
+                    {/*侧边栏*/}
+                    <Sider trigger={null} collapsible collapsed={collapsed} theme="light" style={{
+                        // background: '#f1f5f9',
+                    }}>
+                        <div className="demo-logo-vertical">
+                            <img src={LogoVite} alt="Logo" />
+                            <span>Music</span>
                         </div>
-                    </Content>
-                </Layout>
-            </Layout>
-            {/*全局播放器*/}
-            <MainPlayer />
-        </>
+                        {/*导航栏*/}
+                        <Menu
+                            theme="light"
+                            mode="inline"
+                            defaultSelectedKeys={[selectedKey]}
+                            selectedKeys={selectedKey}
+                            items={items}
+                            onClick={onMenuClick}
+                            style={{
+                                // background: '#f1f5f9',
+
+                            }}
+                        />
+                    </Sider>
+                </div>
+                <div className='content-right'>
+                    <Layout className='layout-content'>
+                        <Header
+                            className='child-header'
+                            style={{
+                                padding: 0,
+                                borderBottom: '1px solid rgb(235, 237, 240)',
+                                background: colorBgContainer,
+                            }}
+                        >
+                            <Button
+                                type="text"
+                                icon={collapsed ? <MenuUnfoldOutlined style={{fontSize: '23px'}}/> : <MenuFoldOutlined style={{fontSize: '23px'}}/>}
+                                onClick={() => setCollapsed(!collapsed)}
+                                style={{
+                                    width: 64,
+                                    height: 64,
+                                }}
+                            />
+
+                            <Button
+                                type="text"
+                                icon={<LeftCircleOutlined style={{fontSize: '23px'}}/>}
+                                onClick={back}
+                                style={{
+                                    width: 64,
+                                    height: 64,
+                                }}
+                            />
+                            
+                            <Button
+                                type="text"
+                                icon={<RightCircleOutlined style={{fontSize: '23px'}}/>}
+                                onClick={forward}
+                                style={{
+                                    width: 64,
+                                    height: 64,
+                                }}
+                            />
+                        </Header>
+                        {/*路由页面*/}
+                        <Content
+                            className='child-content'
+                            style={{
+                                background: colorBgContainer,
+                                borderRadius: borderRadiusLG,
+                            }}
+                        >
+                            {/* 指定路由组件呈现的位置 */}
+                            <div>
+                                {element}
+                            </div>
+                        </Content>
+                    </Layout>
+                </div>
+            </div>
+            <div className="warp-footer">
+                {/*全局播放器*/}
+                <MainPlayer />
+            </div>
+        </div>
     )
 }
