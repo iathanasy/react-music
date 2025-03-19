@@ -98,6 +98,7 @@ export function LayoutIndex({element}) {
                             onClick={onMenuClick}
                             style={{
                                 // background: '#f1f5f9',
+                                border: 'none',
 
                             }}
                         />
